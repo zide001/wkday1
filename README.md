@@ -1,4 +1,4 @@
-# Codex Shared Library
+# wkday1
 
 这是用于在多台电脑上的 Codex 之间同步的共享资料库。
 
@@ -23,14 +23,14 @@
 在另一台电脑上执行：
 
 ```powershell
-git clone <你的Git仓库地址> codex-shared-library
-cd codex-shared-library
+git clone https://github.com/zide001/wkday1.git
+cd wkday1
 ```
 
 之后两个 Codex 都围绕这个仓库工作：
 
 ```powershell
-git pull
+git pull --rebase
 git add .
 git commit -m "Update shared Codex library"
 git push
@@ -41,4 +41,4 @@ git push
 1. 敏感账号、密码、密钥不要直接提交到 Git。
 2. 大文件优先放 `materials/`，如果超过 GitHub 限制，改用 Git LFS 或外部对象存储。
 3. 每次重要整理后提交一次，提交说明写清楚变更内容。
-4. 另一台电脑开始工作前先 `git pull`，结束后再 `git push`。
+4. 另一台电脑开始工作前先 `git pull --rebase`，结束后再 `git push`。

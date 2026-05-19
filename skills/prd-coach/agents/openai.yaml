@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD Coach"
+  short_description: "持续评审、写作和迭代你的 PRD 方法论"
+  default_prompt: "Use $prd-coach to review my PRD against my history and learning examples, then update my next-PRD template."

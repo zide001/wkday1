@@ -1,0 +1,4 @@
+interface:
+  display_name: "We分析日报"
+  short_description: "优化 We分析 ABTest 每日报告和定时推送"
+  default_prompt: "Use $wedata-abtest-daily-report to optimize the We分析 ABTest daily report and check the daily 10:00 schedule plus WeChat delivery."

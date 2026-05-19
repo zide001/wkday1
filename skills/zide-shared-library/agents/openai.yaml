@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zide Shared Library"
+  short_description: "Read zide001 Codex shared materials"
+  default_prompt: "Use $zide-shared-library to read my shared Codex library before helping with this task."

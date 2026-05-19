@@ -1,6 +1,6 @@
 ---
 name: zide-shared-library
-description: Read and use the user's zide001 GitHub/Codex shared library. Use when the user mentions githubzide001, zide001, wkday1, wkday001, GitHub skills, shared Codex materials, long-term knowledge, personal preferences, prompts, workflows, project background, reusable templates, git push/upload to the shared library, or asks Codex to recall/use material stored in their GitHub/shared library.
+description: Read and use the user's zide001 GitHub/Codex shared library. Use when the user mentions githubzide001, zide001, wkday1, wkday001, GitHub skills, shared Codex materials, personal knowledge base, long-term memory, conversation summaries, long-term knowledge, personal preferences, prompts, workflows, project background, reusable templates, git push/upload to the shared library, or asks Codex to recall/use/update material stored in their GitHub/shared library.
 ---
 
 # Zide Shared Library
@@ -22,6 +22,16 @@ Use this skill to access the user's shared Codex knowledge base cloned from:
 3. Start with `README.md` and the relevant `*/INDEX.md` files. Do not load the whole repository into context unless it is tiny and directly relevant.
 4. Use `rg --files` to discover available materials, then read only the files needed for the task.
 5. If the requested information is not present, say that the library does not currently contain it and ask the user where they want it stored.
+
+## Knowledge Base Updates
+
+Use `knowledge/` as the user's durable memory layer.
+
+- Store stable preferences, account/repo context without secrets, repeatable decisions, project background, and concise conversation summaries.
+- Do not dump raw chat logs. Summarize only durable facts, decisions, workflows, and next-use instructions.
+- Update `knowledge/session-notes/` when a conversation creates useful future context.
+- Update `knowledge/profile.md`, `knowledge/codex-operations.md`, or `knowledge/decisions.md` when a fact should be remembered across future Codex sessions.
+- After updating the knowledge base, commit and push from the local skill copy unless the user says not to.
 
 ## Upload And Push Workflow
 

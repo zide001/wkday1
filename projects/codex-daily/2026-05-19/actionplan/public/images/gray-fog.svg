@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Hall Above Gray Fog</title>
+  <desc id="desc">A long table and high-backed chairs floating in gray fog.</desc>
+  <defs>
+    <linearGradient id="fogBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#121923"/>
+      <stop offset="0.48" stop-color="#35404a"/>
+      <stop offset="1" stop-color="#9a9286"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="48%" cy="40%" r="55%">
+      <stop offset="0" stop-color="#e9dcc5" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#e9dcc5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="420" fill="url(#fogBg)"/>
+  <circle cx="475" cy="160" r="230" fill="url(#halo)"/>
+  <g opacity="0.34" fill="#d8d4cb">
+    <path d="M-40 306 C120 254 248 342 390 292 C530 242 640 316 804 276 C904 252 1002 276 1040 290 L1040 420 L-40 420 Z"/>
+    <path d="M-30 122 C112 76 232 150 390 104 C540 60 662 126 816 90 C900 72 990 88 1030 108 L1030 176 C908 138 810 166 690 152 C552 136 446 180 294 154 C158 132 72 166 -30 152 Z"/>
+  </g>
+  <ellipse cx="480" cy="263" rx="286" ry="46" fill="#1d2025" opacity="0.84"/>
+  <path d="M202 256 C305 226 654 226 758 256 C661 284 304 284 202 256 Z" fill="#3f332b"/>
+  <path d="M254 252 C352 238 604 238 704 252" fill="none" stroke="#c3a66e" stroke-opacity="0.42" stroke-width="5"/>
+  <g fill="#15171c" opacity="0.88">
+    <path d="M122 196 h72 v112 h-72 z"/>
+    <path d="M242 170 h74 v138 h-74 z"/>
+    <path d="M405 148 h82 v160 h-82 z"/>
+    <path d="M585 170 h74 v138 h-74 z"/>
+    <path d="M764 196 h72 v112 h-72 z"/>
+  </g>
+  <g fill="#f0d18d">
+    <circle cx="446" cy="246" r="7"/>
+    <circle cx="486" cy="246" r="7"/>
+    <circle cx="526" cy="246" r="7"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="black coat with stitched name">
+  <defs>
+    <linearGradient id="room" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2b2027"/>
+      <stop offset="1" stop-color="#111617"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a2d30"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#room)"/>
+  <g opacity="0.34" fill="#9b7650">
+    <rect x="112" y="118" width="78" height="420"/>
+    <rect x="1040" y="118" width="78" height="420"/>
+    <rect x="234" y="94" width="58" height="372"/>
+    <rect x="916" y="94" width="58" height="372"/>
+  </g>
+  <ellipse cx="640" cy="594" rx="292" ry="64" fill="#030405" opacity="0.54"/>
+  <path d="M512 164h256l78 388H436Z" fill="url(#coat)"/>
+  <path d="M512 164c42 76 76 116 128 132 52-16 86-56 128-132" fill="#101214"/>
+  <path d="M640 292v246" stroke="#3a3d40" stroke-width="8"/>
+  <rect x="568" y="388" width="144" height="62" rx="6" fill="#1b1d1f" stroke="#938369" stroke-width="4"/>
+  <text x="598" y="430" font-family="Georgia, serif" font-size="32" fill="#d4c29c">YOU</text>
+  <path d="M464 238 334 388M816 238l130 150" stroke="#070809" stroke-width="44" stroke-linecap="round"/>
+</svg>

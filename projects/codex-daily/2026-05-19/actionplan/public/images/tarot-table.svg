@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Tarot Table</title>
+  <desc id="desc">Tarot cards, candlelight, and a dark wooden table.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1b1723"/>
+      <stop offset="0.56" stop-color="#3b2d3a"/>
+      <stop offset="1" stop-color="#7b6147"/>
+    </linearGradient>
+    <radialGradient id="candle" cx="50%" cy="42%" r="50%">
+      <stop offset="0" stop-color="#ffd991" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffd991" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <circle cx="480" cy="168" r="188" fill="url(#candle)"/>
+  <ellipse cx="480" cy="300" rx="360" ry="64" fill="#241b18" opacity="0.92"/>
+  <path d="M140 294 C284 236 676 236 820 294 C688 344 272 344 140 294 Z" fill="#4b3125"/>
+  <g transform="translate(338 214) rotate(-10)">
+    <rect width="82" height="126" rx="7" fill="#e9dcc7"/>
+    <rect x="10" y="10" width="62" height="106" rx="4" fill="#31434d"/>
+    <path d="M41 28 L56 65 L41 100 L26 65 Z" fill="#d8b36f"/>
+  </g>
+  <g transform="translate(448 196) rotate(3)">
+    <rect width="82" height="126" rx="7" fill="#e9dcc7"/>
+    <rect x="10" y="10" width="62" height="106" rx="4" fill="#533849"/>
+    <circle cx="41" cy="62" r="21" fill="#d8b36f"/>
+    <path d="M41 36 V88 M18 62 H64" stroke="#533849" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(560 216) rotate(12)">
+    <rect width="82" height="126" rx="7" fill="#e9dcc7"/>
+    <rect x="10" y="10" width="62" height="106" rx="4" fill="#2b4c48"/>
+    <path d="M22 84 C38 32 54 32 70 84" fill="none" stroke="#d8b36f" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M478 138 h28 v70 h-28 z" fill="#ebd6ad"/>
+    <path d="M492 90 C474 116 490 126 492 140 C510 116 510 102 492 90 Z" fill="#ffca73"/>
+    <circle cx="492" cy="132" r="74" fill="#ffca73" opacity="0.12"/>
+  </g>
+  <path d="M144 170 C270 142 412 172 538 144 C670 114 792 138 900 114" fill="none" stroke="#f4d695" stroke-opacity="0.18" stroke-width="5"/>
+</svg>

@@ -1,0 +1,194 @@
+{
+  "id": "lotm-fanart-seeds",
+  "title": "诡秘之主人物图采集种子",
+  "updatedAt": "2026-05-19",
+  "items": [
+    {
+      "id": "qidian-event-kv-2025",
+      "platform": "qidian-yuewen-official",
+      "title": "起点读书《诡秘之主》专题活动 KV",
+      "author": "起点读书",
+      "pageUrl": "https://appshunter.io/events/6748007275",
+      "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/QWgBXg_y8ont1tdw2zcyxw/854x480w.png",
+      "tags": ["官方活动", "KV", "克莱恩", "动画联动"],
+      "usage": "IP 级横幅构图参考"
+    },
+    {
+      "id": "klein-red-card",
+      "platform": "fandom-gallery",
+      "title": "红衣克",
+      "author": "起点抽卡 SSR 卡面 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/a/a0/%E7%BA%A2%E8%A1%A3%E5%85%8B.jpg/revision/latest/scale-to-width-down/500?cb=20251014132630&path-prefix=zh",
+      "tags": ["红黑金", "塔罗牌", "乌鸦", "高识别服装"],
+      "usage": "强符号人物卡面参考"
+    },
+    {
+      "id": "klein-official-full",
+      "platform": "fandom-gallery",
+      "title": "克莱恩官设",
+      "author": "官方设定 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/d/d8/%E5%85%8B%E8%8E%B1%E6%81%A9%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20210101145443&path-prefix=zh",
+      "tags": ["官设", "黑正装", "手杖", "斗篷"],
+      "usage": "主角基本服设参考"
+    },
+    {
+      "id": "klein-tingen",
+      "platform": "fandom-gallery",
+      "title": "廷根时期克莱恩",
+      "author": "官方设定 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/8/80/%E5%BB%B7%E6%A0%B9%E5%85%8B%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20250615155157&path-prefix=zh",
+      "tags": ["廷根", "棕色外套", "帽子", "新手期"],
+      "usage": "第一节/值夜者前期人物参考"
+    },
+    {
+      "id": "klein-german",
+      "platform": "fandom-gallery",
+      "title": "格尔曼·斯帕罗官设",
+      "author": "官方设定 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/a/aa/%E6%A0%BC%E5%B0%94%E6%9B%BC%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20210304150255&path-prefix=zh",
+      "tags": ["格尔曼", "冒险家", "旅行箱", "危险感"],
+      "usage": "中期冒险身份参考"
+    },
+    {
+      "id": "klein-fool",
+      "platform": "fandom-gallery",
+      "title": "愚者官设",
+      "author": "官方设定 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/1/12/%E6%84%9A%E8%80%85%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20210304145753&path-prefix=zh",
+      "tags": ["愚者", "灰雾", "高背椅", "剪影"],
+      "usage": "最终章/灰雾主视觉参考"
+    },
+    {
+      "id": "klein-animation-standing",
+      "platform": "fandom-gallery",
+      "title": "克莱恩动画立绘",
+      "author": "动画设定 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/1/1b/%E5%85%8B%E8%8E%B1%E6%81%A9%E5%8A%A8%E7%94%BB%E7%AB%8B%E7%BB%98.jpg/revision/latest/scale-to-width-down/500?cb=20250923083314&path-prefix=zh",
+      "tags": ["动画", "立绘", "年轻感"],
+      "usage": "更适合普通读者的角色脸参考"
+    },
+    {
+      "id": "klein-animation-costume",
+      "platform": "fandom-gallery",
+      "title": "克莱恩动画服设",
+      "author": "动画设定 / Fandom 图片库收录",
+      "pageUrl": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93",
+      "imageUrl": "https://static.wikia.nocookie.net/lord-of-the-mysteries/images/1/14/%E5%85%8B%E8%8E%B1%E6%81%A9%E5%8A%A8%E7%94%BB%E6%9C%8D%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20250924075955&path-prefix=zh",
+      "tags": ["动画", "服设", "黑礼帽", "马甲"],
+      "usage": "服装拆解参考"
+    },
+    {
+      "id": "zcool-audrey-standee",
+      "platform": "zcool",
+      "title": "诡秘之主同人-奥黛丽·霍尔立牌",
+      "author": "甘叉叉兮",
+      "pageUrl": "https://www.zcool.com.cn/work/ZNzEwMjIxODQ%3D.html",
+      "tags": ["奥黛丽", "立牌", "商业插画", "谷子"],
+      "usage": "奥黛丽/塔罗会成员立绘参考"
+    },
+    {
+      "id": "zcool-lotm-fanart-series",
+      "platform": "zcool",
+      "title": "诡秘之主的同人图",
+      "author": "Da_Vinci喆",
+      "pageUrl": "https://www.zcool.com.cn/work/ZMzgzMTE1NzI%3D.html",
+      "tags": ["同人图合集", "速图", "国内插画师"],
+      "usage": "快速看多角色/多构图气质"
+    },
+    {
+      "id": "zcool-klein-cave",
+      "platform": "zcool",
+      "title": "诡秘之主 克莱恩洞穴",
+      "author": "Z517004132",
+      "pageUrl": "https://www.zcool.com.cn/work/ZNjUwOTE2ODA%3D.html",
+      "tags": ["克莱恩", "洞穴", "场景", "AIGC"],
+      "usage": "冒险/洞穴章节场景参考"
+    },
+    {
+      "id": "huashi6-klein-commission",
+      "platform": "huashi6",
+      "title": "诡秘之主同人付费委托",
+      "author": "Akumon久",
+      "pageUrl": "https://www.huashi6.com/draw/1859432",
+      "tags": ["克莱恩", "同人", "付费委托", "1080P"],
+      "usage": "人物图质量参考，需授权后使用"
+    },
+    {
+      "id": "deviantart-the-fool-ailily52",
+      "platform": "artstation-deviantart",
+      "title": "The Fool",
+      "author": "aiLily52",
+      "pageUrl": "https://www.deviantart.com/ailily52/art/The-Fool-1028185270",
+      "imageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07b05f81-4787-4731-b698-817394578fce/dh05kty-ada8215c-cefc-401d-8b4c-f11195815075.png/v1/fill/w_1280,h_1280,q_80,strp/the_fool_by_ailily52_dh05kty-fullview.jpg",
+      "tags": ["The Fool", "fanart", "tarot", "chair"],
+      "usage": "海外二创构图参考"
+    },
+    {
+      "id": "artstation-klein-pedro",
+      "platform": "artstation-deviantart",
+      "title": "KLein Moretti-Lord of the Mysteries Fanart",
+      "author": "Pedro Musacchio",
+      "pageUrl": "https://pedromusacchio.artstation.com/projects/B14x28",
+      "tags": ["Klein", "character design", "ArtStation"],
+      "usage": "高完成度人物设计参考"
+    },
+    {
+      "id": "artstation-dunn-smith",
+      "platform": "artstation-deviantart",
+      "title": "Captain Dunn Smith - Lord of mysteries",
+      "author": "Pedro Musacchio",
+      "pageUrl": "https://www.artstation.com/artwork/18vA5X",
+      "tags": ["Dunn Smith", "character design", "ArtStation"],
+      "usage": "邓恩队长人物参考"
+    },
+    {
+      "id": "duitang-klein-amon",
+      "platform": "huaban-duitang",
+      "title": "诡秘之主 同人 男主克莱恩&阿蒙",
+      "author": "大玩家却没有筹码",
+      "pageUrl": "https://m-2.duitang.com/atlas/?id=114288021",
+      "tags": ["克莱恩", "阿蒙", "聚合图集"],
+      "usage": "发现线索，需追溯原作者"
+    },
+    {
+      "id": "huaban-lotm-board",
+      "platform": "huaban-duitang",
+      "title": "诡秘之主图片大全画板",
+      "author": "GALI辣椒 / 花瓣画板",
+      "pageUrl": "https://huaban.com/boards/67259970/",
+      "tags": ["聚合", "LOFTER线索", "同人扑克"],
+      "usage": "发现线索，需追溯原作者"
+    },
+    {
+      "id": "bilibili-klein-q-scene",
+      "platform": "bilibili",
+      "title": "诡秘之主|克莱恩|q版场景插画稿件",
+      "pageUrl": "https://www.bilibili.com/video/BV1zQa5ejEnw/",
+      "tags": ["Q版", "绘画过程", "克莱恩"],
+      "usage": "Q版/轻量场景参考"
+    },
+    {
+      "id": "bilibili-klein-faceless-birthday",
+      "platform": "bilibili",
+      "title": "2024克莱恩生贺：无面人",
+      "pageUrl": "https://www.bilibili.com/video/BV1Fu4m137HY/",
+      "tags": ["生贺", "无面人", "手书"],
+      "usage": "无面人身份情绪参考"
+    },
+    {
+      "id": "lofter-cocozha",
+      "platform": "lofter",
+      "title": "魂牵梦萦的奇迹",
+      "author": "Coco渣",
+      "pageUrl": "https://cocozha.lofter.com/post/1dfdf019_2bd4289db",
+      "tags": ["LOFTER", "克莱恩", "伦纳德", "伦克"],
+      "usage": "LOFTER 高质量样本入口，建议人工打开"
+    }
+  ]
+}

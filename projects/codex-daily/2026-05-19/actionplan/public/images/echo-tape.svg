@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="unlabeled cassette tape">
+  <defs>
+    <linearGradient id="desk" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#26363b"/>
+      <stop offset="1" stop-color="#1b1512"/>
+    </linearGradient>
+    <linearGradient id="tape" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2c3235"/>
+      <stop offset="1" stop-color="#111315"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#desk)"/>
+  <ellipse cx="640" cy="520" rx="416" ry="86" fill="#050706" opacity="0.42"/>
+  <rect x="278" y="210" width="724" height="310" rx="42" fill="url(#tape)" stroke="#798486" stroke-width="8"/>
+  <rect x="398" y="258" width="484" height="86" rx="10" fill="#d8c9a9"/>
+  <circle cx="468" cy="408" r="72" fill="#090c0d" stroke="#aab1ae" stroke-width="12"/>
+  <circle cx="812" cy="408" r="72" fill="#090c0d" stroke="#aab1ae" stroke-width="12"/>
+  <circle cx="468" cy="408" r="26" fill="#d8c9a9"/>
+  <circle cx="812" cy="408" r="26" fill="#d8c9a9"/>
+  <rect x="548" y="372" width="184" height="72" rx="18" fill="#050706" stroke="#67716f" stroke-width="6"/>
+  <path d="M220 148c102 46 122 96 60 150M1040 150c-104 48-124 98-60 150" stroke="#a1bfc4" stroke-width="6" fill="none" opacity="0.3"/>
+</svg>

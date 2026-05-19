@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="empty hand in winter">
+  <defs>
+    <linearGradient id="winter" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d8c8ac"/>
+      <stop offset="0.52" stop-color="#4a4036"/>
+      <stop offset="1" stop-color="#141413"/>
+    </linearGradient>
+    <radialGradient id="palm" cx="48%" cy="45%" r="42%">
+      <stop offset="0" stop-color="#f0cda3" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#f0cda3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#winter)"/>
+  <rect width="1280" height="720" fill="url(#palm)"/>
+  <ellipse cx="640" cy="560" rx="408" ry="78" fill="#050403" opacity="0.32"/>
+  <path d="M500 386c42-86 118-118 222-96 58 12 104 52 140 120 18 34-2 78-42 86-64 12-122 12-174-2-46-12-96-10-148 6-44 14-78-28-58-68Z" fill="#d2aa7b" stroke="#8b6646" stroke-width="8"/>
+  <path d="M548 372c-36-74-24-132 12-142 34-10 58 32 66 100M638 328c-8-80 16-132 52-130 38 2 48 58 36 132M748 344c26-62 68-86 96-62 26 22 8 70-42 118" fill="none" stroke="#8b6646" stroke-width="16" stroke-linecap="round"/>
+  <path d="M392 438c-84-18-162-60-234-126" stroke="#e9d6b6" stroke-width="7" opacity="0.34"/>
+  <path d="M850 282c82-32 158-78 226-138" stroke="#e9d6b6" stroke-width="7" opacity="0.28"/>
+</svg>

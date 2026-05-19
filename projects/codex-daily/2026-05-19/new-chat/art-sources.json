@@ -1,0 +1,77 @@
+{
+  "notes": "2D/anime-style character art candidates for the Qidian personality quiz. Keep 3D screenshots and live-action stills out of the main pool.",
+  "items": [
+    {
+      "id": "klein-zcool-card",
+      "character": "克莱恩·莫雷蒂",
+      "source": "站酷 / 诡秘之主卡牌",
+      "sourcePage": "https://www.zcool.com.cn/work/ZNTMxNzgzNTY%3D.html?from=SearchCollections",
+      "directUrl": "https://img.zcool.cn/community/01e0c360bd8d1711013eaf7005964f.jpg?x-oss-process=image/saveexif,1/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100&k=1ec5eba03fdf6bf46f0dbfa2638ec584&t=6a0c3c1c",
+      "asset": "assets/characters-hires/klein-audrey-zcool-2.jpg",
+      "status": "main"
+    },
+    {
+      "id": "audrey-zcool-card",
+      "character": "奥黛丽·霍尔",
+      "source": "站酷 / 诡秘之主卡牌",
+      "sourcePage": "https://www.zcool.com.cn/work/ZNTMxNzgzNTY%3D.html?from=SearchCollections",
+      "directUrl": "https://img.zcool.cn/community/01db2960bd8d1511013eaf708ac1c4.jpg?x-oss-process=image/saveexif,1/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100&k=f3ae67bfbfd46d428fbec1a164d2d271&t=6a0c3c1c",
+      "asset": "assets/characters-hires/klein-audrey-zcool-1.jpg",
+      "status": "main"
+    },
+    {
+      "id": "ye-xiu-alphacoders",
+      "character": "叶修",
+      "source": "Wallpaper Abyss",
+      "sourcePage": "https://wall.alphacoders.com/big.php?i=1002598",
+      "directUrl": "https://images2.alphacoders.com/100/1002598.jpg",
+      "asset": "assets/characters-hires/ye-xiu-alphacoders.jpg",
+      "status": "main"
+    },
+    {
+      "id": "tang-rou-webtoon",
+      "character": "唐柔",
+      "source": "Fandom / The King's Avatar",
+      "sourcePage": "https://the-kings-avatar.fandom.com/wiki/Tang_Rou/Gallery",
+      "directUrl": "https://static.wikia.nocookie.net/the-kings-avatar/images/9/96/Tang_Rou_Soft_Mist_Webtoon.jpg",
+      "asset": "assets/characters-hires/tang-rou-webtoon.jpg",
+      "status": "main"
+    },
+    {
+      "id": "xun-er-huashi",
+      "character": "萧薰儿",
+      "source": "触站",
+      "sourcePage": "https://www.huashi6.com/draw/1530565",
+      "directUrl": "https://img2.huashi6.com/images/resource/thumbnail/2023/08/22/155715_3536550514.jpg?imageMogr2/quality/100/interlace/1/thumbnail/2000x",
+      "asset": "assets/characters-hires/xun-er-huashi.jpg",
+      "status": "main"
+    },
+    {
+      "id": "medusa-huashi",
+      "character": "美杜莎女王",
+      "source": "触站",
+      "sourcePage": "https://www.huashi6.com/draw/1691656",
+      "directUrl": "https://img2.huashi6.com/images/resource/thumbnail/2024/08/09/153530_93094187229.jpg?imageMogr2/quality/100/interlace/1/thumbnail/2000x",
+      "asset": "assets/characters-hires/medusa-huashi-main.jpg",
+      "status": "main"
+    },
+    {
+      "id": "xiao-yan-huashi-1",
+      "character": "萧炎",
+      "source": "触站",
+      "sourcePage": "https://www.huashi6.com/draw/1448827",
+      "directUrl": "https://img2.huashi6.com/images/resource/thumbnail/2023/04/19/204234_15492718944.jpg?imageMogr2/quality/100/interlace/1/thumbnail/2000x",
+      "asset": "assets/characters-hires/xiao-yan-huashi-1.jpg",
+      "status": "reserve"
+    },
+    {
+      "id": "btth-zcool-set",
+      "character": "斗破苍穹候选",
+      "source": "站酷 / 斗破苍穹云破天光",
+      "sourcePage": "https://www.zcool.com.cn/work/ZNjM5ODY2ODg%3D.html",
+      "directUrl": "https://img.zcool.cn/community/01nxijnjevrs4zhqirzigp3530.jpg?x-oss-process=image/saveexif,1/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100&k=8c796c2588a4e41ab1ecd083f099114f&t=6a0c3c1c",
+      "asset": "assets/characters-hires/btth-zcool-1.jpg",
+      "status": "reserve"
+    }
+  ]
+}

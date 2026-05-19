@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>诡秘之主视觉参考图墙</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #0f1418;
+        color: #f5efe4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(circle at 14% 8%, rgba(191, 148, 84, 0.24), transparent 28rem),
+          radial-gradient(circle at 92% 18%, rgba(94, 147, 153, 0.22), transparent 26rem),
+          linear-gradient(135deg, #0f1418, #191c25 48%, #241b21);
+      }
+
+      main {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 42px 0 70px;
+      }
+
+      header {
+        max-width: 840px;
+        margin-bottom: 28px;
+      }
+
+      .kicker {
+        margin: 0 0 10px;
+        color: #9fd8cf;
+        font-size: 0.86rem;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        margin: 0;
+        color: #d8cdbf;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .note {
+        margin-top: 16px;
+        padding: 12px 14px;
+        border: 1px solid rgba(235, 198, 128, 0.28);
+        border-radius: 8px;
+        color: #f4d9a5;
+        background: rgba(63, 45, 25, 0.36);
+        line-height: 1.6;
+      }
+
+      .section-title {
+        margin: 34px 0 14px;
+        color: #efe0c7;
+        font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+        font-size: 1.35rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: rgba(11, 15, 18, 0.72);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+      }
+
+      .card--wide {
+        grid-column: span 2;
+      }
+
+      .thumb {
+        display: block;
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+        background: #15181d;
+      }
+
+      .card--wide .thumb {
+        height: 260px;
+      }
+
+      .body {
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+      }
+
+      .body strong {
+        color: #fff5e6;
+        line-height: 1.35;
+      }
+
+      .body p {
+        margin: 0;
+        color: #c8baaa;
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      a {
+        color: #9fd8cf;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #d9fff6;
+      }
+
+      .link-card {
+        min-height: 180px;
+        display: grid;
+        align-content: center;
+        gap: 12px;
+        padding: 20px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        padding: 5px 8px;
+        border-radius: 999px;
+        color: #e5d4bb;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 0.78rem;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          width: min(100% - 22px, 1180px);
+          padding-top: 28px;
+        }
+
+        .card--wide {
+          grid-column: span 1;
+        }
+
+        .thumb,
+        .card--wide .thumb {
+          height: 230px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="kicker">参考图墙 · 只做风格 moodboard</p>
+        <h1>诡秘之主视觉参考</h1>
+        <p class="intro">
+          这里先把起点读书官方活动、官设图、动画设定和公开二创页面集中到一起看。
+          这些图不直接进入阅读器正文，后续我们按这个气质自己做原创配图。
+        </p>
+        <p class="note">
+          版权提示：本页只引用外部公开页面做内部风格参考，图片版权归原平台、出品方或画师所有。
+          正式测试链接建议使用我们重新生成或重新绘制的原创图片。
+        </p>
+      </header>
+
+      <h2 class="section-title">起点 / 官方活动感</h2>
+      <section class="grid">
+        <article class="card card--wide">
+          <img
+            class="thumb"
+            src="https://is1-ssl.mzstatic.com/image/thumb/QWgBXg_y8ont1tdw2zcyxw/854x480w.png"
+            alt="起点读书诡秘之主专题活动视觉"
+          />
+          <div class="body">
+            <strong>起点读书专题活动 KV</strong>
+            <p>适合参考：大场景、灰蓝建筑、金色装置、人物站姿和 IP 级主视觉比例。</p>
+            <a href="https://appshunter.io/events/6748007275" target="_blank" rel="noreferrer">查看来源页面</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/a/a0/%E7%BA%A2%E8%A1%A3%E5%85%8B.jpg/revision/latest/scale-to-width-down/500?cb=20251014132630&amp;path-prefix=zh"
+            alt="红衣克参考图"
+          />
+          <div class="body">
+            <strong>红衣克</strong>
+            <p>Wiki 标注为 2019 年起点抽卡 SSR 卡面。适合参考：高识别服装、纸牌、乌鸦、红黑金。</p>
+            <a href="https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93" target="_blank" rel="noreferrer">查看图片库</a>
+          </div>
+        </article>
+      </section>
+
+      <h2 class="section-title">克莱恩身份参考</h2>
+      <section class="grid">
+        <article class="card">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/d/d8/%E5%85%8B%E8%8E%B1%E6%81%A9%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20210101145443&amp;path-prefix=zh"
+            alt="克莱恩官设"
+          />
+          <div class="body">
+            <strong>克莱恩官设</strong>
+            <p>适合参考：黑色正装、斗篷、手杖、怀表与克制表情。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/8/80/%E5%BB%B7%E6%A0%B9%E5%85%8B%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20250615155157&amp;path-prefix=zh"
+            alt="廷根时期克莱恩"
+          />
+          <div class="body">
+            <strong>廷根时期</strong>
+            <p>适合参考：侦探感、棕色外套、帽子、文件袋，新手期更生活化。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/a/aa/%E6%A0%BC%E5%B0%94%E6%9B%BC%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20210304150255&amp;path-prefix=zh"
+            alt="格尔曼官设"
+          />
+          <div class="body">
+            <strong>格尔曼·斯帕罗</strong>
+            <p>适合参考：冒险家身份、深色长外套、旅行箱、危险但克制的气质。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/1/12/%E6%84%9A%E8%80%85%E5%AE%98%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20210304145753&amp;path-prefix=zh"
+            alt="愚者官设"
+          />
+          <div class="body">
+            <strong>愚者</strong>
+            <p>适合参考：灰雾、高背椅、剪影化人物、不可直视的神秘感。</p>
+          </div>
+        </article>
+      </section>
+
+      <h2 class="section-title">动画 / 服设参考</h2>
+      <section class="grid">
+        <article class="card">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/1/1b/%E5%85%8B%E8%8E%B1%E6%81%A9%E5%8A%A8%E7%94%BB%E7%AB%8B%E7%BB%98.jpg/revision/latest/scale-to-width-down/500?cb=20250923083314&amp;path-prefix=zh"
+            alt="克莱恩动画立绘"
+          />
+          <div class="body">
+            <strong>动画立绘</strong>
+            <p>适合参考：更清爽的动画线条、年轻感、读者更容易接受的角色脸。</p>
+          </div>
+        </article>
+
+        <article class="card card--wide">
+          <img
+            class="thumb"
+            src="https://static.wikia.nocookie.net/lord-of-the-mysteries/images/1/14/%E5%85%8B%E8%8E%B1%E6%81%A9%E5%8A%A8%E7%94%BB%E6%9C%8D%E8%AE%BE.jpg/revision/latest/scale-to-width-down/500?cb=20250924075955&amp;path-prefix=zh"
+            alt="克莱恩动画服设"
+          />
+          <div class="body">
+            <strong>动画服设</strong>
+            <p>适合参考：黑礼帽、黄条纹马甲、披风外套、服饰局部拆解。</p>
+          </div>
+        </article>
+      </section>
+
+      <h2 class="section-title">二创页面入口</h2>
+      <section class="grid">
+        <article class="card link-card">
+          <strong>站酷：诡秘之主的同人图</strong>
+          <p>一组速图，适合看二创构图和人物氛围，不直接使用原图。</p>
+          <div class="tags">
+            <span class="tag">同人图</span>
+            <span class="tag">速图</span>
+            <span class="tag">画师页</span>
+          </div>
+          <a href="https://www.zcool.com.cn/work/ZMzgzMTE1NzI%3D.html" target="_blank" rel="noreferrer">打开页面</a>
+        </article>
+
+        <article class="card link-card">
+          <strong>站酷：克莱恩洞穴</strong>
+          <p>偏场景/洞穴探索方向，适合后续做冒险章节配图参考。</p>
+          <div class="tags">
+            <span class="tag">场景</span>
+            <span class="tag">洞穴</span>
+            <span class="tag">AIGC 参与</span>
+          </div>
+          <a href="https://www.zcool.com.cn/work/ZNjUwOTE2ODA%3D.html" target="_blank" rel="noreferrer">打开页面</a>
+        </article>
+
+        <article class="card link-card">
+          <strong>Fandom：克莱恩图片库</strong>
+          <p>集中看官方设定、红衣设定、动画设定和历年生贺。</p>
+          <div class="tags">
+            <span class="tag">官设</span>
+            <span class="tag">身份变化</span>
+            <span class="tag">动画</span>
+          </div>
+          <a href="https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82/%E5%9B%BE%E7%89%87%E5%BA%93" target="_blank" rel="noreferrer">打开页面</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

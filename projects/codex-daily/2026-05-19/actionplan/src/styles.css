@@ -1,0 +1,724 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #11161a;
+  color: #f6efe4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(107, 201, 184, 0.16), transparent 32rem),
+    linear-gradient(135deg, #101719 0%, #172627 48%, #221c29 100%);
+}
+
+.app-shell--center {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.reader-stage {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  justify-items: center;
+  padding: 44px 24px 78px;
+  color: var(--reader-text);
+  background:
+    linear-gradient(rgba(228, 214, 190, 0.9), rgba(214, 194, 164, 0.92)),
+    var(--reader-backdrop);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reader-stage--chrome-visible {
+  padding-top: 92px;
+}
+
+.coin-stage {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.84fr) minmax(260px, 1fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 88px);
+  padding: clamp(28px, 6vw, 72px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 28%, rgba(229, 187, 108, 0.18), transparent 20rem),
+    radial-gradient(circle at 30% 72%, rgba(134, 216, 197, 0.16), transparent 22rem),
+    linear-gradient(145deg, rgba(12, 17, 20, 0.86), rgba(29, 25, 38, 0.9));
+}
+
+.coin-copy {
+  max-width: 620px;
+}
+
+.coin-reveal {
+  grid-column: 2;
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+}
+
+.coin-button {
+  width: min(56vw, 320px);
+  height: min(56vw, 320px);
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  perspective: 1200px;
+}
+
+.coin-button:disabled {
+  cursor: wait;
+}
+
+.coin {
+  position: relative;
+  width: min(46vw, 240px);
+  height: min(46vw, 240px);
+  min-width: 180px;
+  min-height: 180px;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 34px 34px rgba(0, 0, 0, 0.34));
+  transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.coin--tails {
+  transform: rotateY(180deg);
+}
+
+.coin--tossing {
+  animation: coin-toss 1.28s cubic-bezier(0.18, 0.7, 0.24, 1) forwards;
+}
+
+.coin-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 12px solid rgba(255, 242, 199, 0.56);
+  border-radius: 50%;
+  color: #321d11;
+  background:
+    radial-gradient(circle at 34% 30%, #fff0bf 0 9%, transparent 10%),
+    radial-gradient(circle at 62% 72%, rgba(111, 72, 25, 0.26), transparent 16%),
+    linear-gradient(135deg, #d89f43 0%, #ffe19a 48%, #aa6f25 100%);
+  backface-visibility: hidden;
+  box-shadow:
+    inset 0 0 0 12px rgba(111, 72, 25, 0.22),
+    inset 0 0 34px rgba(255, 251, 208, 0.54);
+  font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+  font-size: clamp(1.85rem, 5.4vw, 2.55rem);
+  font-weight: 800;
+}
+
+.coin-face span {
+  width: auto;
+  max-width: 82%;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(255, 246, 202, 0.34);
+}
+
+.coin-face--tails {
+  transform: rotateY(180deg);
+  color: #0b2830;
+  background:
+    radial-gradient(circle at 34% 30%, #f2fffa 0 9%, transparent 10%),
+    radial-gradient(circle at 62% 72%, rgba(11, 64, 70, 0.24), transparent 16%),
+    linear-gradient(135deg, #7fd7c7 0%, #eefdf4 50%, #348883 100%);
+}
+
+.coin-result {
+  justify-self: center;
+  min-height: 62px;
+  display: grid;
+  place-items: center;
+  color: #f6efe4;
+  text-align: center;
+}
+
+.coin-result p {
+  margin: 0;
+  color: #d8ccb9;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.coin-result strong {
+  max-width: min(86vw, 560px);
+  color: #fff7e9;
+  font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
+  line-height: 1.1;
+  text-wrap: balance;
+  text-shadow:
+    0 0 26px rgba(255, 224, 154, 0.32),
+    0 12px 34px rgba(0, 0, 0, 0.34);
+}
+
+.toss-button {
+  grid-column: 2;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid rgba(134, 216, 197, 0.56);
+  border-radius: 8px;
+  color: #f7fff9;
+  background: rgba(42, 125, 116, 0.34);
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.toss-button:hover:not(:disabled) {
+  background: rgba(42, 125, 116, 0.48);
+  transform: translateY(-1px);
+}
+
+.toss-button:disabled {
+  cursor: wait;
+  opacity: 0.78;
+}
+
+.toss-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.coin-route-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: min(100%, 980px);
+  justify-self: center;
+}
+
+.coin-route-grid section {
+  display: grid;
+  gap: 6px;
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(13, 16, 18, 0.56);
+  backdrop-filter: blur(18px);
+}
+
+.coin-route-grid strong {
+  color: #86d8c5;
+  line-height: 1.4;
+}
+
+.coin-route-grid span {
+  color: #fff9f0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.coin-route-grid small {
+  color: #cfc1ad;
+  line-height: 1.55;
+}
+
+.reader-toolbar {
+  position: fixed;
+  z-index: 5;
+  top: 112px;
+  left: max(18px, calc((100vw - 980px) / 2 - 92px));
+  display: grid;
+  gap: 8px;
+  width: 72px;
+  padding: 8px;
+  border: 1px solid rgba(112, 86, 55, 0.18);
+  border-radius: 8px;
+  background: rgba(246, 235, 215, 0.92);
+  box-shadow: 0 14px 34px rgba(68, 49, 28, 0.14);
+}
+
+.reader-topbar {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 0 clamp(18px, 4vw, 44px);
+  border-bottom: 1px solid rgba(104, 79, 48, 0.16);
+  color: #6c5b48;
+  background: rgba(237, 220, 194, 0.9);
+  backdrop-filter: blur(16px);
+}
+
+.reader-topbar div {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.reader-topbar strong {
+  color: #34291f;
+}
+
+.reader-topbar span,
+.reader-topbar p {
+  margin: 0;
+  color: #7b6955;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+@keyframes coin-toss {
+  0% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  36% {
+    transform: translateY(-132px) rotateX(760deg) rotateY(520deg) rotateZ(16deg);
+  }
+  72% {
+    transform: translateY(18px) rotateX(1320deg) rotateY(940deg) rotateZ(-12deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(1440deg) rotateY(1080deg) rotateZ(0deg);
+  }
+}
+
+.icon-button {
+  width: 56px;
+  min-height: 54px;
+  display: inline-grid;
+  gap: 3px;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #6c5b48;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    opacity 160ms ease;
+}
+
+.icon-button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.icon-button span,
+.dock-status span {
+  font-size: 0.76rem;
+  line-height: 1.1;
+}
+
+.icon-button:hover:not(:disabled) {
+  color: #2f2116;
+  background: rgba(126, 95, 57, 0.1);
+  transform: translateY(-1px);
+}
+
+.icon-button--active {
+  border-color: rgba(126, 95, 57, 0.2);
+  color: #2f2116;
+  background: rgba(126, 95, 57, 0.12);
+}
+
+.icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.dock-status {
+  width: 56px;
+  min-height: 54px;
+  display: inline-grid;
+  gap: 3px;
+  place-items: center;
+  border-radius: 6px;
+  color: #927d63;
+}
+
+.dock-status svg {
+  width: 19px;
+  height: 19px;
+}
+
+.reader-panel {
+  width: min(100%, 820px);
+  min-height: calc(100vh - 170px);
+  padding: clamp(42px, 5vw, 68px) clamp(28px, 6vw, 76px);
+  border: 1px solid rgba(112, 86, 55, 0.18);
+  border-radius: 4px;
+  color: var(--reader-text);
+  background: var(--reader-page-bg);
+  box-shadow:
+    0 28px 56px rgba(68, 49, 28, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.26);
+}
+
+.story-header {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.story-kicker {
+  margin: 0 0 14px;
+  color: var(--reader-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0;
+  color: var(--reader-text);
+  font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+  font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+.chapter-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--reader-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.chapter-subtitle {
+  max-width: 46rem;
+  margin: 16px auto 0;
+  color: var(--reader-muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.chapter-figure {
+  margin: 0 0 30px;
+}
+
+.chapter-figure img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(112, 86, 55, 0.18);
+  box-shadow: 0 14px 30px rgba(68, 49, 28, 0.12);
+}
+
+.chapter-figure figcaption {
+  margin-top: 10px;
+  color: var(--reader-muted);
+  font-size: 0.86rem;
+}
+
+.chapter-body {
+  display: grid;
+  gap: 18px;
+  color: var(--reader-text);
+  font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+  font-size: var(--reader-font-size);
+  line-height: 2.08;
+}
+
+.chapter-body p {
+  margin: 0;
+  text-indent: 2em;
+}
+
+.choice-area {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  margin-top: 42px;
+  padding-top: 38px;
+  border-top: 1px solid rgba(112, 86, 55, 0.16);
+}
+
+.choice-area::before {
+  content: "本章选项";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: var(--reader-muted);
+  font-size: 0.86rem;
+}
+
+.choice-button {
+  width: 100%;
+  min-height: 66px;
+  display: grid;
+  gap: 4px;
+  align-content: center;
+  padding: 14px 18px;
+  border: 1px solid rgba(112, 86, 55, 0.2);
+  border-radius: 4px;
+  color: var(--reader-text);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.choice-button:hover {
+  border-color: rgba(112, 86, 55, 0.38);
+  background: rgba(255, 255, 255, 0.34);
+  transform: translateY(-1px);
+}
+
+.choice-button span {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.choice-button small {
+  color: var(--reader-muted);
+  line-height: 1.5;
+}
+
+.choice-button--ending {
+  text-align: center;
+}
+
+.reader-side-panel {
+  position: fixed;
+  z-index: 5;
+  top: 112px;
+  right: max(18px, calc((100vw - 980px) / 2 - 330px));
+  width: min(300px, calc(100vw - 36px));
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid rgba(112, 86, 55, 0.18);
+  border-radius: 8px;
+  color: #3c2d20;
+  background: rgba(246, 235, 215, 0.96);
+  box-shadow: 0 18px 42px rgba(68, 49, 28, 0.18);
+}
+
+.reader-side-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(112, 86, 55, 0.14);
+}
+
+.reader-side-panel header strong {
+  font-size: 1rem;
+}
+
+.reader-side-panel header span,
+.setting-group > span {
+  color: #806f5c;
+  font-size: 0.86rem;
+}
+
+.toc-list {
+  display: grid;
+  gap: 6px;
+}
+
+.toc-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 4px;
+  color: #3c2d20;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toc-item:hover,
+.toc-item--active {
+  background: rgba(126, 95, 57, 0.12);
+}
+
+.toc-item span {
+  color: #9a8368;
+  font-size: 0.78rem;
+}
+
+.toc-item strong {
+  overflow: hidden;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setting-group {
+  display: grid;
+  gap: 10px;
+  padding: 14px 0;
+}
+
+.theme-options,
+.font-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.theme-swatch,
+.font-controls button {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid rgba(112, 86, 55, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.theme-swatch--active {
+  outline: 2px solid rgba(126, 95, 57, 0.44);
+  outline-offset: 2px;
+}
+
+.font-controls strong {
+  min-width: 56px;
+  text-align: center;
+  color: #3c2d20;
+}
+
+.loading-panel,
+.error-panel {
+  width: min(100%, 520px);
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(13, 16, 18, 0.78);
+  color: #f9efe2;
+  text-align: center;
+}
+
+.loading-panel svg {
+  width: 36px;
+  height: 36px;
+  color: #86d8c5;
+}
+
+.config-warnings {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 6;
+  display: grid;
+  gap: 6px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 12px 14px;
+  border: 1px solid rgba(241, 189, 117, 0.42);
+  border-radius: 8px;
+  color: #ffe2b5;
+  background: rgba(21, 17, 13, 0.86);
+  backdrop-filter: blur(14px);
+}
+
+.config-warnings p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 720px) {
+  .coin-stage {
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding: 44px 18px;
+  }
+
+  .coin-button,
+  .coin-result,
+  .coin-reveal,
+  .toss-button {
+    grid-column: 1;
+  }
+
+  .coin-button {
+    width: min(74vw, 280px);
+    height: min(74vw, 280px);
+  }
+
+  .coin {
+    width: min(58vw, 220px);
+    height: min(58vw, 220px);
+  }
+
+  .coin-route-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reader-stage {
+    align-items: start;
+    padding: 112px 14px 36px;
+  }
+
+  .reader-panel {
+    padding: 24px 18px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coin--tossing {
+    animation: none;
+  }
+}

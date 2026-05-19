@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" role="img" aria-label="empty theater under ember light">
+  <defs>
+    <linearGradient id="hall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#37202a"/>
+      <stop offset="0.54" stop-color="#13161a"/>
+      <stop offset="1" stop-color="#26342f"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="50%" cy="38%" r="44%">
+      <stop offset="0" stop-color="#ffc86f" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#ffc86f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="curtain" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#451e2b"/>
+      <stop offset="0.5" stop-color="#762b32"/>
+      <stop offset="1" stop-color="#451e2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="820" fill="url(#hall)"/>
+  <rect width="1280" height="820" fill="url(#spot)"/>
+  <path d="M0 0h290c-42 126-62 268-60 426H0Z" fill="url(#curtain)" opacity="0.86"/>
+  <path d="M1280 0H990c42 126 62 268 60 426h230Z" fill="url(#curtain)" opacity="0.86"/>
+  <path d="M316 122h648v360H316Z" fill="#0b1012" opacity="0.78"/>
+  <path d="M368 172h544v260H368Z" fill="#21161a"/>
+  <ellipse cx="640" cy="500" rx="250" ry="74" fill="#e8ae5a" opacity="0.18"/>
+  <path d="M288 560c138-82 566-82 704 0v94H288Z" fill="#5b2a2c"/>
+  <path d="M198 678h884" stroke="#0d1114" stroke-width="44" stroke-linecap="round"/>
+  <g fill="#11161a" opacity="0.82">
+    <ellipse cx="286" cy="704" rx="54" ry="24"/>
+    <ellipse cx="430" cy="704" rx="54" ry="24"/>
+    <ellipse cx="574" cy="704" rx="54" ry="24"/>
+    <ellipse cx="718" cy="704" rx="54" ry="24"/>
+    <ellipse cx="862" cy="704" rx="54" ry="24"/>
+    <ellipse cx="1006" cy="704" rx="54" ry="24"/>
+  </g>
+  <g stroke="#f2d28e" stroke-width="4" stroke-linecap="round" opacity="0.38">
+    <path d="M530 132c16 54 16 104 0 150"/>
+    <path d="M640 108c18 72 18 138 0 196"/>
+    <path d="M750 132c-16 54-16 104 0 150"/>
+  </g>
+  <circle cx="640" cy="452" r="18" fill="#d93e51"/>
+  <path d="M640 452c-34 20-62 46-84 80 52-10 90-30 116-62Z" fill="#9c2635"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Faceless Mask Over City</title>
+  <desc id="desc">A half mask floats above a rainy city skyline.</desc>
+  <defs>
+    <linearGradient id="rainBg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#151821"/>
+      <stop offset="0.55" stop-color="#303944"/>
+      <stop offset="1" stop-color="#59616a"/>
+    </linearGradient>
+    <linearGradient id="mask" x1="0" x2="1">
+      <stop offset="0" stop-color="#efe4cf"/>
+      <stop offset="1" stop-color="#a58f78"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="420" fill="url(#rainBg)"/>
+  <g stroke="#d9e0e2" stroke-opacity="0.18" stroke-width="3">
+    <path d="M92 18 L42 128"/>
+    <path d="M188 0 L132 138"/>
+    <path d="M314 18 L252 158"/>
+    <path d="M444 2 L388 144"/>
+    <path d="M574 22 L520 160"/>
+    <path d="M704 0 L648 132"/>
+    <path d="M842 18 L780 158"/>
+    <path d="M948 6 L904 118"/>
+  </g>
+  <path d="M0 284 C152 250 262 306 410 276 C560 244 692 292 836 260 C894 248 930 248 960 252 L960 420 L0 420 Z" fill="#1c2027"/>
+  <g fill="#30323a">
+    <rect x="70" y="188" width="92" height="170"/>
+    <rect x="186" y="214" width="122" height="144"/>
+    <rect x="640" y="184" width="106" height="174"/>
+    <rect x="770" y="222" width="118" height="136"/>
+  </g>
+  <path d="M358 82 C426 52 556 54 622 82 C620 178 584 250 494 268 C406 250 366 178 358 82 Z" fill="url(#mask)" opacity="0.94"/>
+  <path d="M492 74 C494 112 492 228 494 268" stroke="#6c584b" stroke-width="5" opacity="0.42"/>
+  <path d="M398 148 C430 126 458 126 482 150 C456 166 426 166 398 148 Z" fill="#161821" opacity="0.78"/>
+  <path d="M520 150 C548 128 576 130 602 150 C574 166 546 166 520 150 Z" fill="#161821" opacity="0.78"/>
+  <path d="M438 214 C470 232 522 232 556 214" fill="none" stroke="#6c584b" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+  <path d="M0 348 C196 316 340 362 500 334 C664 304 774 340 960 304" fill="none" stroke="#cfd4d1" stroke-opacity="0.18" stroke-width="9"/>
+</svg>

@@ -12,3 +12,7 @@ projects/
     decisions.md
     tasks.md
 ```
+
+## Current Archives
+
+- `codex-daily/2026-05-19/`: 2026-05-19 的 Codex 本地任务归档。

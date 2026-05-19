@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="copper coins and one hawthorn">
+  <defs>
+    <linearGradient id="desk" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4a3728"/>
+      <stop offset="1" stop-color="#161512"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#desk)"/>
+  <ellipse cx="640" cy="520" rx="420" ry="84" fill="#050403" opacity="0.36"/>
+  <g transform="translate(430 270)">
+    <circle cx="0" cy="90" r="76" fill="#a76d31" stroke="#e1b56b" stroke-width="8"/>
+    <rect x="-18" y="72" width="36" height="36" fill="#3d2819"/>
+    <circle cx="96" cy="128" r="76" fill="#8d5d2c" stroke="#d09d58" stroke-width="8"/>
+    <rect x="78" y="110" width="36" height="36" fill="#302116"/>
+    <circle cx="206" cy="74" r="76" fill="#b97834" stroke="#e8bd72" stroke-width="8"/>
+    <rect x="188" y="56" width="36" height="36" fill="#3d2819"/>
+  </g>
+  <path d="M740 246v220" stroke="#6f4a2d" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="740" cy="246" r="42" fill="#b92c31" stroke="#f0b06b" stroke-width="6"/>
+  <circle cx="724" cy="230" r="8" fill="#fff1bd" opacity="0.8"/>
+</svg>

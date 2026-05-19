@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="book lake with bamboo slips">
+  <defs>
+    <linearGradient id="lake" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#273940"/>
+      <stop offset="0.55" stop-color="#18211f"/>
+      <stop offset="1" stop-color="#46331f"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="40%" r="52%">
+      <stop offset="0" stop-color="#eac06d" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#eac06d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#lake)"/>
+  <rect width="1280" height="720" fill="url(#lampGlow)"/>
+  <path d="M0 520c164-56 320-56 484 0s322 56 486 0 220-54 310-18v218H0Z" fill="#0b1213" opacity="0.58"/>
+  <g fill="#d3b27b" opacity="0.88">
+    <rect x="360" y="210" width="48" height="258" rx="8" transform="rotate(-12 384 339)"/>
+    <rect x="430" y="196" width="48" height="286" rx="8" transform="rotate(-8 454 339)"/>
+    <rect x="504" y="192" width="48" height="296" rx="8" transform="rotate(-3 528 340)"/>
+    <rect x="580" y="196" width="48" height="286" rx="8" transform="rotate(3 604 339)"/>
+    <rect x="654" y="208" width="48" height="262" rx="8" transform="rotate(8 678 339)"/>
+  </g>
+  <path d="M770 250c52-50 118-50 170 0v170H770Z" fill="#f1c76d" opacity="0.22"/>
+  <circle cx="854" cy="258" r="32" fill="#f4c56e"/>
+  <g stroke="#f5d89c" stroke-width="3" opacity="0.28">
+    <line x1="246" y1="420" x2="1034" y2="386"/>
+    <line x1="166" y1="492" x2="1142" y2="464"/>
+  </g>
+</svg>

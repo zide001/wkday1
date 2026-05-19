@@ -1,0 +1,387 @@
+{
+  "id": "lord-of-mysteries-research",
+  "title": "诡秘之主资料库",
+  "usageNote": "公开资料整理版，用于互动阅读器的人物设定、分支灵感和数据配置。不要直接复制小说原文。",
+  "lastUpdated": "2026-05-19",
+  "spoilerLevel": "heavy",
+  "sources": [
+    {
+      "id": "official-qidian",
+      "label": "起点中文网《诡秘之主》官方书页",
+      "url": "https://book.qidian.com/info/1010868264/"
+    },
+    {
+      "id": "fandom-main",
+      "label": "Lord of the Mysteries Wiki 首页人物概览",
+      "url": "https://lordofthemysteries.fandom.com/wiki/Lord_of_Mysteries_Wiki"
+    },
+    {
+      "id": "fandom-tarot-zh",
+      "label": "诡秘之主 Wiki：塔罗会",
+      "url": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%A1%94%E7%BD%97%E4%BC%9A"
+    },
+    {
+      "id": "baike-lotm",
+      "label": "百度百科：诡秘之主",
+      "url": "https://wapbaike.baidu.com/item/%E8%AF%A1%E7%A7%98%E4%B9%8B%E4%B8%BB/22466085"
+    },
+    {
+      "id": "china-writer-review",
+      "label": "中国作家网/文艺报：《诡秘之主》的人文意涵",
+      "url": "https://wyb.chinawriter.com.cn/attachment/201912/25/d46b61fa-c89a-4856-9ab3-2fc34dd8b833.pdf"
+    },
+    {
+      "id": "fandom-klein-zh",
+      "label": "诡秘之主 Wiki：克莱恩·莫雷蒂",
+      "url": "https://lordofthemysteries.fandom.com/zh/wiki/%E5%85%8B%E8%8E%B1%E6%81%A9%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82"
+    },
+    {
+      "id": "fandom-dunn",
+      "label": "Lord of the Mysteries Wiki：Dunn Smith",
+      "url": "https://lordofthemysteries.fandom.com/wiki/Dunn_Smith"
+    },
+    {
+      "id": "fandom-azik",
+      "label": "Lord of the Mysteries Wiki：Azik Eggers",
+      "url": "https://lordofthemysteries.fandom.com/wiki/Azik_Eggers"
+    },
+    {
+      "id": "fandom-benson-zh",
+      "label": "诡秘之主 Wiki：班森·莫雷蒂",
+      "url": "https://lordofthemysteries.fandom.com/zh/wiki/%E7%8F%AD%E6%A3%AE%C2%B7%E8%8E%AB%E9%9B%B7%E8%92%82"
+    }
+  ],
+  "book": {
+    "name": "诡秘之主",
+    "author": "爱潜水的乌贼",
+    "genreTags": ["西方玄幻", "蒸汽朋克", "类克苏鲁", "神秘学", "群像"],
+    "settingNotes": [
+      "背景气质接近维多利亚时代社会风貌，适合用煤气灯、报纸、教会、贫民区、海上冒险、秘密集会做视觉关键词。",
+      "核心张力不是单纯升级，而是非凡力量、疯狂风险、身份扮演与人性保存之间的拉扯。",
+      "互动分支适合围绕谨慎/冒险、隐瞒/坦白、扮演/自我、神性/人性来设计。"
+    ],
+    "recommendedReaderModes": ["侦探调查", "塔罗会会议", "身份扮演", "灰雾抉择", "守夜者任务"]
+  },
+  "organizations": [
+    {
+      "id": "tarot_club",
+      "name": "塔罗会",
+      "type": "隐秘组织",
+      "founder": "克莱恩·莫雷蒂",
+      "meetingPattern": "贝克兰德时间每周一下午三点",
+      "summary": "建立在灰雾之上的秘密聚会，成员以塔罗牌大牌为代号，主要进行情报、材料和任务交换。",
+      "interactiveUse": "可做成章节间的中枢：每次重大选择后回到塔罗会，解锁情报、交换道具、影响伙伴信任。",
+      "sources": ["fandom-tarot-zh", "fandom-main"]
+    },
+    {
+      "id": "nighthawks",
+      "name": "值夜者",
+      "type": "官方非凡者组织",
+      "summary": "黑夜女神教会下属力量，负责处理神秘事件；廷根时期是克莱恩早期安全感和牺牲主题的核心场景。",
+      "interactiveUse": "适合作为新手教程线：调查、封印物风险、队友情感、任务后果。",
+      "sources": ["fandom-main", "china-writer-review"]
+    },
+    {
+      "id": "rose_school_temperance",
+      "name": "玫瑰学派节制派",
+      "type": "隐秘派系",
+      "summary": "莎伦、马里奇相关势力，可承接身体异化、欲望克制和盟友互助的支线。",
+      "interactiveUse": "可做克莱恩线中期支援分支，选择是否帮助莎伦影响后续资源与风险。",
+      "sources": ["fandom-main"]
+    }
+  ],
+  "characters": [
+    {
+      "id": "klein_moretti",
+      "name": "克莱恩·莫雷蒂",
+      "englishName": "Klein Moretti",
+      "aliases": ["周明瑞", "夏洛克·莫里亚蒂", "格尔曼·斯帕罗", "道恩·唐泰斯", "梅林·赫尔墨斯"],
+      "tarotCode": "愚者 / 世界",
+      "pathway": "占卜家途径",
+      "affiliations": ["塔罗会", "值夜者", "莫雷蒂家"],
+      "roleInStory": "主角；现代灵魂进入异世界后，在灰雾、值夜者、塔罗会和多重身份中寻找真相与自我。",
+      "personalityNotes": ["谨慎", "会自嘲", "重视家人和普通人的生活", "善于扮演", "在神性压力下努力保存人性"],
+      "branchHooks": [
+        "是否把灰雾当作底牌，还是先依赖现实组织保护。",
+        "是否以格尔曼身份制造威慑，代价是逐渐远离日常生活。",
+        "在更高位格前，选择优先保护个人记忆、塔罗会成员或更广泛的人群。"
+      ],
+      "sources": ["fandom-main", "fandom-klein-zh", "baike-lotm", "china-writer-review"]
+    },
+    {
+      "id": "audrey_hall",
+      "name": "奥黛丽·霍尔",
+      "englishName": "Audrey Hall",
+      "aliases": ["贝克兰德最耀眼的宝石"],
+      "tarotCode": "正义",
+      "pathway": "空想家 / 观众相关途径",
+      "affiliations": ["塔罗会", "心理炼金会", "霍尔家族"],
+      "roleInStory": "塔罗会创始成员之一，从贵族少女成长为能理解社会阴影和承担责任的非凡者。",
+      "personalityNotes": ["善良", "聪明", "共情力强", "从天真走向成熟"],
+      "branchHooks": [
+        "让她在社交场寻找线索，或在心理治疗中触碰角色真实创伤。",
+        "她的选择可影响塔罗会资金、心理支援和贵族圈情报。"
+      ],
+      "sources": ["fandom-main", "baike-lotm", "fandom-tarot-zh"]
+    },
+    {
+      "id": "alger_wilson",
+      "name": "阿尔杰·威尔逊",
+      "englishName": "Alger Wilson",
+      "tarotCode": "倒吊人",
+      "pathway": "暴君 / 水手相关途径",
+      "affiliations": ["塔罗会", "风暴教会", "蓝色复仇者号"],
+      "roleInStory": "塔罗会创始成员之一，早期为会议提供大量神秘学常识和海上情报。",
+      "personalityNotes": ["谨慎", "多疑", "经验丰富", "现实主义"],
+      "branchHooks": [
+        "让玩家选择是否信任他的判断，影响海上冒险线风险。",
+        "可作为情报交易与误判陷阱的代表角色。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "derrick_berg",
+      "name": "戴里克·伯格",
+      "englishName": "Derrick Berg",
+      "tarotCode": "太阳",
+      "pathway": "太阳途径",
+      "affiliations": ["塔罗会", "白银城"],
+      "roleInStory": "来自白银城的塔罗会成员，连接神弃之地和远古灾变信息。",
+      "personalityNotes": ["单纯", "坚定", "信任感强", "背负族群希望"],
+      "branchHooks": [
+        "可做远方求援线：塔罗会能否给白银城带来光。",
+        "他的选择适合测试玩家是否愿意为了陌生人承担风险。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "fors_wall",
+      "name": "佛尔思·沃尔",
+      "englishName": "Fors Wall",
+      "tarotCode": "魔术师",
+      "pathway": "门途径",
+      "affiliations": ["塔罗会", "亚伯拉罕家族相关"],
+      "roleInStory": "畅销小说家与塔罗会成员，适合承接写作、旅行、门与空间相关支线。",
+      "personalityNotes": ["拖延", "聪明", "怕麻烦但关键时刻可靠"],
+      "branchHooks": [
+        "用她的小说家身份隐藏情报。",
+        "让她在门途径风险和朋友休之间做选择。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "emlyn_white",
+      "name": "埃姆林·怀特",
+      "englishName": "Emlyn White",
+      "tarotCode": "月亮",
+      "pathway": "月亮途径",
+      "affiliations": ["塔罗会", "血族", "丰收教堂"],
+      "roleInStory": "血族成员与塔罗会成员，能提供血族、药剂和教堂相关支线。",
+      "personalityNotes": ["骄傲", "有收藏癖", "嘴硬", "逐渐承担使命"],
+      "branchHooks": [
+        "用他制造轻喜剧缓冲，也可以转入血族危机线。",
+        "选择保护收藏、保护族群或服从塔罗会任务。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "cattleya",
+      "name": "嘉德丽雅",
+      "englishName": "Cattleya",
+      "tarotCode": "隐者",
+      "pathway": "隐者途径",
+      "affiliations": ["塔罗会", "星之上将", "未来号"],
+      "roleInStory": "海上强者与知识型角色，连接神秘知识、海上冒险和罗塞尔相关线索。",
+      "personalityNotes": ["理性", "博学", "克制", "对知识有强烈追求"],
+      "branchHooks": [
+        "设计知识换风险的分支：越了解真相，越接近污染。",
+        "海上探索线的重要 NPC。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "leonard_mitchell",
+      "name": "伦纳德·米切尔",
+      "englishName": "Leonard Mitchell",
+      "tarotCode": "星星",
+      "pathway": "黑暗途径",
+      "affiliations": ["值夜者", "塔罗会", "黑夜女神教会"],
+      "roleInStory": "克莱恩廷根时期同事，后成为塔罗会成员；适合承接友情、追查和诗人式轻松感。",
+      "personalityNotes": ["直觉敏锐", "有诗人气质", "重情义", "带一点不靠谱的幽默"],
+      "branchHooks": [
+        "让他发现克莱恩多重身份的边缘线索。",
+        "玩家可选择坦白一部分真相或继续隐藏。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh", "china-writer-review"]
+    },
+    {
+      "id": "xio_derecha",
+      "name": "休·迪尔查",
+      "englishName": "Xio Derecha",
+      "tarotCode": "审判",
+      "pathway": "审判者途径",
+      "affiliations": ["塔罗会", "赏金猎人圈"],
+      "roleInStory": "赏金猎人出身的塔罗会成员，适合接法律、调查和街头行动。",
+      "personalityNotes": ["正义感强", "务实", "行动派"],
+      "branchHooks": [
+        "在法律程序和街头效率之间做选择。",
+        "与佛尔思组合可做双人调查章节。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "sharron",
+      "name": "莎伦",
+      "englishName": "Sharron",
+      "tarotCode": "节制",
+      "pathway": "异种 / 被缚者相关途径",
+      "affiliations": ["玫瑰学派节制派", "塔罗会相关"],
+      "roleInStory": "克莱恩的重要盟友之一，冷静克制，适合引入节制派与欲望压制主题。",
+      "personalityNotes": ["安静", "克制", "可靠", "有距离感"],
+      "branchHooks": [
+        "可以让玩家选择是否冒险帮助节制派。",
+        "她适合做高压剧情里的冷静支点。"
+      ],
+      "sources": ["fandom-main", "fandom-tarot-zh"]
+    },
+    {
+      "id": "azik_eggers",
+      "name": "阿兹克·艾格斯",
+      "englishName": "Azik Eggers",
+      "pathway": "死神途径",
+      "affiliations": ["霍伊大学", "克莱恩盟友"],
+      "roleInStory": "克莱恩的老师和重要引路人，失忆与死亡权柄让他天然适合承接历史谜团。",
+      "personalityNotes": ["温和", "可信赖", "带有漫长历史的疲惫感", "隐藏着危险位格"],
+      "branchHooks": [
+        "让玩家决定是否唤醒他的记忆。",
+        "用信件作为章节跳转道具，连接历史、陵寝和灵界。"
+      ],
+      "sources": ["fandom-azik", "fandom-main"]
+    },
+    {
+      "id": "dunn_smith",
+      "name": "邓恩·史密斯",
+      "englishName": "Dunn Smith",
+      "pathway": "黑暗 / 不眠者相关途径",
+      "affiliations": ["值夜者", "黑荆棘安保公司", "黑夜女神教会"],
+      "roleInStory": "廷根值夜者队长，早期守护者与牺牲主题的核心人物。",
+      "personalityNotes": ["沉稳", "负责", "容易遗忘细节但可靠", "队长感强"],
+      "branchHooks": [
+        "让玩家在执行命令、保护队友、追查真相之间取舍。",
+        "适合做第一卷情感爆点前的日常积累。"
+      ],
+      "sources": ["fandom-dunn", "china-writer-review"]
+    },
+    {
+      "id": "daly_simone",
+      "name": "戴莉·西蒙妮",
+      "englishName": "Daly Simone",
+      "pathway": "死亡相关途径",
+      "affiliations": ["值夜者"],
+      "roleInStory": "值夜者相关角色，与邓恩线能构成悲剧与温柔并存的情感支线。",
+      "personalityNotes": ["成熟", "直接", "带有黑色幽默", "情感真挚"],
+      "branchHooks": [
+        "可在调查章节里作为通灵、审讯、情感提示 NPC。",
+        "和邓恩相关选择能提高读者代入感。"
+      ],
+      "sources": ["china-writer-review", "fandom-main"]
+    },
+    {
+      "id": "benson_moretti",
+      "name": "班森·莫雷蒂",
+      "englishName": "Benson Moretti",
+      "affiliations": ["莫雷蒂家", "鲁恩王国财政部"],
+      "roleInStory": "克莱恩的哥哥，代表普通人的家庭日常与责任感。",
+      "personalityNotes": ["圆滑", "幽默", "顾家", "现实但温暖"],
+      "branchHooks": [
+        "让克莱恩在隐藏秘密与保护家人之间做选择。",
+        "普通晚餐、搬家、工作晋升可以作为高压剧情后的回温章节。"
+      ],
+      "sources": ["fandom-benson-zh", "china-writer-review"]
+    },
+    {
+      "id": "melissa_moretti",
+      "name": "梅丽莎·莫雷蒂",
+      "englishName": "Melissa Moretti",
+      "affiliations": ["莫雷蒂家", "技术学校/大学线"],
+      "roleInStory": "克莱恩的妹妹，代表技术、理性、贫寒家庭向上生活的愿望。",
+      "personalityNotes": ["节俭", "认真", "聪明", "不轻易表达但很在意家人"],
+      "branchHooks": [
+        "用她提醒克莱恩：世界不只有神秘，也有学费、面包和未来。",
+        "家庭线可以影响克莱恩人性值。"
+      ],
+      "sources": ["fandom-klein-zh", "china-writer-review"]
+    },
+    {
+      "id": "roselle_gustav",
+      "name": "罗塞尔·古斯塔夫",
+      "englishName": "Roselle Gustav",
+      "aliases": ["黄涛"],
+      "roleInStory": "前代穿越者，日记和遗产影响克莱恩对世界、路径和真相的理解。",
+      "personalityNotes": ["才华横溢", "复杂", "风流", "既荒诞又悲凉"],
+      "branchHooks": [
+        "罗塞尔日记可作为解谜物品。",
+        "玩家解读日记会获得情报，也可能触碰高层污染。"
+      ],
+      "sources": ["fandom-main"]
+    },
+    {
+      "id": "amon",
+      "name": "阿蒙",
+      "englishName": "Amon",
+      "pathway": "错误途径",
+      "roleInStory": "高位格对手，象征欺诈、寄生、命运偷窃和身份安全危机。",
+      "personalityNotes": ["危险", "戏谑", "极端聪明", "压迫感强"],
+      "branchHooks": [
+        "任何看似安全的选择都可能被阿蒙污染或替换。",
+        "适合做读者信任机制的破坏者。"
+      ],
+      "sources": ["baike-lotm", "fandom-main"]
+    },
+    {
+      "id": "adam",
+      "name": "亚当",
+      "englishName": "Adam",
+      "pathway": "空想家相关",
+      "roleInStory": "高位格推动者，适合用作宏大叙事、命运安排和观测者压力的来源。",
+      "personalityNotes": ["平静", "神秘", "像作者般安排故事"],
+      "branchHooks": [
+        "可设计成读者以为自己选择自由，但某些线已被提前写下。",
+        "适合做结局前的 meta 叙事节点。"
+      ],
+      "sources": ["baike-lotm", "fandom-main"]
+    },
+    {
+      "id": "evernight_goddess",
+      "name": "黑夜女神",
+      "englishName": "Evernight Goddess",
+      "roleInStory": "克莱恩线重要高位存在，与值夜者体系、黑夜、隐秘和关键庇护相关。",
+      "personalityNotes": ["隐秘", "克制", "深不可测"],
+      "branchHooks": [
+        "在关键死亡或危机节点，作为代价不明的庇护力量出现。",
+        "可以把信仰、自由意志、神明援手做成选择题。"
+      ],
+      "sources": ["baike-lotm", "fandom-main"]
+    }
+  ],
+  "readerDesignIdeas": [
+    {
+      "id": "humanity_meter",
+      "name": "人性值",
+      "description": "选择保护家人、记住队友、用幽默抵抗恐惧时上升；过度依赖身份扮演或高位力量时下降。",
+      "usableInCurrentReader": true
+    },
+    {
+      "id": "fog_table_hub",
+      "name": "灰雾会议中枢",
+      "description": "每过一节回到塔罗会，读者选择向谁提问或交易，从而打开不同支线。",
+      "usableInCurrentReader": true
+    },
+    {
+      "id": "identity_cards",
+      "name": "身份牌",
+      "description": "克莱恩、夏洛克、格尔曼、道恩、梅林分别对应调查、威慑、社交、奇迹等玩法。",
+      "usableInCurrentReader": true
+    }
+  ]
+}

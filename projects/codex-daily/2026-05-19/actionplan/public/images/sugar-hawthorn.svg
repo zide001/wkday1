@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="candied hawthorn skewers">
+  <defs>
+    <linearGradient id="street" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3c3027"/>
+      <stop offset="1" stop-color="#171511"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="45%" cy="36%" r="52%">
+      <stop offset="0" stop-color="#ffe2a0" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#ffe2a0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#street)"/>
+  <rect width="1280" height="720" fill="url(#shine)"/>
+  <ellipse cx="640" cy="576" rx="400" ry="74" fill="#050403" opacity="0.34"/>
+  <path d="M640 106v468" stroke="#5b3a24" stroke-width="18" stroke-linecap="round"/>
+  <path d="M430 170h420M392 270h496M456 370h368" stroke="#6f4a2d" stroke-width="14" stroke-linecap="round"/>
+  <g fill="#b82c2f" stroke="#f5b36c" stroke-width="5">
+    <circle cx="454" cy="170" r="34"/>
+    <circle cx="548" cy="170" r="34"/>
+    <circle cx="642" cy="170" r="34"/>
+    <circle cx="736" cy="170" r="34"/>
+    <circle cx="830" cy="170" r="34"/>
+    <circle cx="420" cy="270" r="34"/>
+    <circle cx="514" cy="270" r="34"/>
+    <circle cx="608" cy="270" r="34"/>
+    <circle cx="702" cy="270" r="34"/>
+    <circle cx="796" cy="270" r="34"/>
+    <circle cx="480" cy="370" r="34"/>
+    <circle cx="574" cy="370" r="34"/>
+    <circle cx="668" cy="370" r="34"/>
+    <circle cx="762" cy="370" r="34"/>
+  </g>
+  <g fill="#fff3c2" opacity="0.76">
+    <circle cx="442" cy="156" r="8"/>
+    <circle cx="596" cy="252" r="8"/>
+    <circle cx="750" cy="352" r="8"/>
+  </g>
+</svg>

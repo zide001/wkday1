@@ -1,0 +1,561 @@
+{
+  "id": "demo-fate-coin-library",
+  "title": "命运硬币书架",
+  "author": "同人测试稿",
+  "startChapterId": "sugar_start",
+  "coinGate": {
+    "title": "让硬币替你开一本书",
+    "subtitle": "两位主角都做成了五节互动阅读。落下之后，只显示故事名，然后直接进入正文。",
+    "heads": {
+      "label": "陈平安：一口甜到万里路",
+      "target": "sugar_start",
+      "lines": ["糖葫芦试心", "书简湖问心", "剑气长城隐官"]
+    },
+    "tails": {
+      "label": "克莱恩：灰雾之上的回声",
+      "target": "klein_start",
+      "lines": ["廷根醒来", "灰雾塔罗会", "愚者归来"]
+    }
+  },
+  "assets": {
+    "mud_alley": {
+      "id": "mud_alley",
+      "role": "background",
+      "src": "/images/mud-alley.svg",
+      "alt": "冬天小巷里的泥墙和窄路",
+      "position": "center",
+      "overlay": 0.48
+    },
+    "sugar_hawthorn": {
+      "id": "sugar_hawthorn",
+      "role": "illustration",
+      "src": "/images/sugar-hawthorn.svg",
+      "alt": "插在草靶上的糖葫芦",
+      "caption": "红得发亮的糖衣，在冷风里像一点很远的灯。"
+    },
+    "copper_sweet": {
+      "id": "copper_sweet",
+      "role": "illustration",
+      "src": "/images/copper-sweet.svg",
+      "alt": "铜钱旁边的一颗山楂",
+      "caption": "这一口甜，是用自己攒下来的铜钱换来的。"
+    },
+    "paper_wrap": {
+      "id": "paper_wrap",
+      "role": "illustration",
+      "src": "/images/paper-wrap.svg",
+      "alt": "被油纸包起来的糖葫芦",
+      "caption": "少年把甜味收起来，像收住一口气。"
+    },
+    "thin_thread": {
+      "id": "thin_thread",
+      "role": "illustration",
+      "src": "/images/thin-thread.svg",
+      "alt": "糖葫芦上缠着一根几乎看不见的细线",
+      "caption": "无缘无故的好处，有时像一根看不见的线。"
+    },
+    "empty_hand": {
+      "id": "empty_hand",
+      "role": "illustration",
+      "src": "/images/empty-hand.svg",
+      "alt": "少年空着的手掌",
+      "caption": "手里什么都没有，心里却像多了一块石头。"
+    },
+    "book_lake": {
+      "id": "book_lake",
+      "role": "illustration",
+      "src": "/images/book-lake.svg",
+      "alt": "湖水上的竹简和灯",
+      "caption": "水面很静，人心却不总是清楚。"
+    },
+    "mountain_gate": {
+      "id": "mountain_gate",
+      "role": "illustration",
+      "src": "/images/mountain-gate.svg",
+      "alt": "山门前亮着一盏灯",
+      "caption": "山不在高，规矩立住了，人心才有地方回来。"
+    },
+    "sword_wall": {
+      "id": "sword_wall",
+      "role": "illustration",
+      "src": "/images/sword-wall.svg",
+      "alt": "高墙上密集的剑光",
+      "caption": "城头风大，许多名字被风吹成了剑光。"
+    },
+    "final_lamp": {
+      "id": "final_lamp",
+      "role": "illustration",
+      "src": "/images/final-lamp.svg",
+      "alt": "山路尽头的一盏灯",
+      "caption": "万里路走到最后，不是为了高高在上，而是让更多人能平安回家。"
+    },
+    "tingen_night": {
+      "id": "tingen_night",
+      "role": "illustration",
+      "src": "/images/tingen-night.svg",
+      "alt": "煤气灯下的维多利亚风格街道",
+      "caption": "陌生的城市亮着煤气灯，旧记忆与新名字同时醒来。"
+    },
+    "gray_fog": {
+      "id": "gray_fog",
+      "role": "illustration",
+      "src": "/images/gray-fog.svg",
+      "alt": "灰雾上方的长桌与高背椅",
+      "caption": "雾气之上，弱小的人先学会把恐惧藏进体面。"
+    },
+    "tarot_table": {
+      "id": "tarot_table",
+      "role": "illustration",
+      "src": "/images/tarot-table.svg",
+      "alt": "长桌上的塔罗牌与烛火",
+      "caption": "每一次聚会，既是交换情报，也是确认自己还站在人这边。"
+    },
+    "faceless_mask": {
+      "id": "faceless_mask",
+      "role": "illustration",
+      "src": "/images/faceless-mask.svg",
+      "alt": "半张面具悬在雨夜城市上方",
+      "caption": "会扮演很多人之后，最难的是仍然记得自己是谁。"
+    },
+    "fool_lamp": {
+      "id": "fool_lamp",
+      "role": "illustration",
+      "src": "/images/fool-lamp.svg",
+      "alt": "灰雾深处亮着一盏小灯",
+      "caption": "神座很高，灯很小，可那盏灯才是回家的方向。"
+    }
+  },
+  "chapters": {
+    "sugar_start": {
+      "id": "sugar_start",
+      "title": "第一节：糖葫芦试心",
+      "subtitle": "泥瓶巷的冬天很冷，红糖衣却亮得像能把人心照出来。",
+      "progressLabel": "第 1/5 节",
+      "background": "mud_alley",
+      "illustration": "sugar_hawthorn",
+      "content": [
+        "陈平安站在巷口，袖子短了一截，草鞋边上沾着泥。风从墙缝里钻出来，吹得他肚子里也空空地响。",
+        "卖糖葫芦的老人挑着草靶经过，红山楂一串串亮着。老人停下脚步，看了看这个瘦小的孩子，说这一串可以给他，不收钱。",
+        "陈平安摸了摸怀里的几枚铜钱。那是他攒了很久的钱，本来另有用处。甜味就在眼前，底线也在眼前。"
+      ],
+      "choices": [
+        {
+          "id": "buy_and_eat",
+          "text": "买下来，当场吃掉",
+          "target": "sugar_buy_eat",
+          "hint": "用自己的钱，换一口自己的甜"
+        },
+        {
+          "id": "buy_not_eat",
+          "text": "买下来，但先不吃",
+          "target": "sugar_buy_save",
+          "hint": "把甜味留到更需要的时候"
+        },
+        {
+          "id": "free_and_eat",
+          "text": "不买，接过免费的糖葫芦吃掉",
+          "target": "sugar_free_eat",
+          "hint": "一串糖葫芦，也许不是白给的"
+        },
+        {
+          "id": "refuse_and_leave",
+          "text": "不买，也不吃，转身离开",
+          "target": "sugar_refuse",
+          "hint": "苦一点，但不欠这一口甜"
+        }
+      ]
+    },
+    "sugar_buy_eat": {
+      "id": "sugar_buy_eat",
+      "title": "一口自己的甜",
+      "progressLabel": "第 1/5 节",
+      "background": "mud_alley",
+      "illustration": "copper_sweet",
+      "content": [
+        "陈平安把铜钱一枚枚数清楚，递给老人。糖衣很脆，酸味也很重。他吃得很慢，像怕一下子吃完，就再也记不起这点滋味。",
+        "回去的路上，他觉得自己没有做错。日子很苦，但只要是自己挣来的，就可以堂堂正正吃一口甜。"
+      ],
+      "choices": [
+        {
+          "id": "to_book_lake_from_buy_eat",
+          "text": "很多年后，走向书简湖",
+          "target": "book_lake_trial",
+          "hint": "这口甜会变成一杆称"
+        }
+      ]
+    },
+    "sugar_buy_save": {
+      "id": "sugar_buy_save",
+      "title": "把甜留住",
+      "progressLabel": "第 1/5 节",
+      "background": "mud_alley",
+      "illustration": "paper_wrap",
+      "content": [
+        "陈平安还是付了钱，却没有立刻吃。他找老人要了一小片油纸，把糖葫芦仔细包好，藏进怀里。",
+        "也许明天会更饿，也许路上会遇见比他更想吃甜的人。他没有得到立刻入口的甜，却学会了把想要的东西暂时放下。"
+      ],
+      "choices": [
+        {
+          "id": "to_book_lake_from_save",
+          "text": "很多年后，走向书简湖",
+          "target": "book_lake_trial",
+          "hint": "留住的甜，会变成一份耐心"
+        }
+      ]
+    },
+    "sugar_free_eat": {
+      "id": "sugar_free_eat",
+      "title": "细线",
+      "progressLabel": "第 1/5 节",
+      "background": "mud_alley",
+      "illustration": "thin_thread",
+      "content": [
+        "陈平安接过那串糖葫芦。老人笑了笑，说小孩子吃点甜，不算什么。",
+        "糖衣在齿间碎开的时候，他先是高兴，随后心里像被什么东西轻轻拽了一下。他不知道这份好意从哪里来，也不知道以后要还到哪里去。"
+      ],
+      "choices": [
+        {
+          "id": "to_book_lake_from_debt",
+          "text": "很多年后，走向书简湖",
+          "target": "book_lake_trial",
+          "hint": "那根细线，会在更大的湖面上浮出来"
+        }
+      ]
+    },
+    "sugar_refuse": {
+      "id": "sugar_refuse",
+      "title": "草鞋少年",
+      "progressLabel": "第 1/5 节",
+      "background": "mud_alley",
+      "illustration": "empty_hand",
+      "content": [
+        "陈平安摇了摇头，说自己没钱，就不拿了。他说得很小声，却说得很稳。",
+        "红糖衣从眼前一点点远去，风还是冷，肚子还是空。手里什么都没有，可脚下的路忽然变得清楚起来。"
+      ],
+      "choices": [
+        {
+          "id": "to_book_lake_from_refuse",
+          "text": "很多年后，走向书简湖",
+          "target": "book_lake_trial",
+          "hint": "空着的手，会握住更重的道理"
+        }
+      ]
+    },
+    "book_lake_trial": {
+      "id": "book_lake_trial",
+      "title": "第二节：书简湖问心",
+      "subtitle": "水面很大，人与人的账更大。",
+      "progressLabel": "第 2/5 节",
+      "background": "book_lake",
+      "illustration": "book_lake",
+      "content": [
+        "后来陈平安走到书简湖。湖上灯火连着灯火，像一册摊开的旧书，字里行间却全是人情、规矩、亏欠和报应。",
+        "他见过被逼到退无可退的人，也见过把道理说得漂亮、做事却极脏的人。小时候那串糖葫芦像一枚小小的砝码，忽然被放到更大的秤盘上。",
+        "这一回，不是吃不吃甜，而是看见错事以后，要用什么办法面对。"
+      ],
+      "choices": [
+        {
+          "id": "lake_rule",
+          "text": "先立规矩，谁错谁还",
+          "target": "mountain_rule",
+          "hint": "先把账算清，湖面才会安静"
+        },
+        {
+          "id": "lake_mercy",
+          "text": "先护住眼前人，再慢慢补账",
+          "target": "mountain_rule",
+          "hint": "有人得先活下来，公道才有以后"
+        },
+        {
+          "id": "lake_self",
+          "text": "把错处记下来，自己也一起受着",
+          "target": "mountain_rule",
+          "hint": "照见别人的错，也照见自己"
+        }
+      ]
+    },
+    "mountain_rule": {
+      "id": "mountain_rule",
+      "title": "第三节：落魄山立规",
+      "subtitle": "有了一座山，就不能只想着自己走得快。",
+      "progressLabel": "第 3/5 节",
+      "background": "mountain_gate",
+      "illustration": "mountain_gate",
+      "content": [
+        "再后来，他有了一座山。山上来了许多人，有的懂事，有的吵闹，有的身上带着旧伤，有的只是想找个能安心睡觉的地方。",
+        "陈平安忽然明白，所谓山主，不是站得最高的人，而是最后一个熄灯的人。糖葫芦也好，书简湖也好，所有选择都在提醒他：规矩不能只是拿来管别人。",
+        "山门要开多大，规矩要立多硬，都会决定这座山以后像不像一个家。"
+      ],
+      "choices": [
+        {
+          "id": "mountain_rules",
+          "text": "山门要热闹，也要有规矩",
+          "target": "sword_wall_trial",
+          "hint": "门可以开，规矩也要立住"
+        },
+        {
+          "id": "mountain_children",
+          "text": "把最小的人放在最前面",
+          "target": "sword_wall_trial",
+          "hint": "最弱的人站稳了，山才像家"
+        },
+        {
+          "id": "mountain_burden",
+          "text": "先问自己能不能担得起",
+          "target": "sword_wall_trial",
+          "hint": "先把责任扛到自己肩上"
+        }
+      ]
+    },
+    "sword_wall_trial": {
+      "id": "sword_wall_trial",
+      "title": "第四节：剑气长城隐官",
+      "subtitle": "城头风大，一个人的选择会落到很多人的命上。",
+      "progressLabel": "第 4/5 节",
+      "background": "sword_wall",
+      "illustration": "sword_wall",
+      "content": [
+        "他终于走到剑气长城。那里的风像剑，城头像一条很长很长的伤口。许多人把生死说得轻，是因为已经把最重的东西放在身后。",
+        "隐官二字落到肩上时，陈平安不能再只问自己愿不愿意。他要算粮草、算人心、算退路，也要算每一场牺牲到底值不值得。",
+        "小时候不白拿一串糖葫芦，是一个孩子的底线。如今不白白送掉别人的性命，是一个隐官的底线。"
+      ],
+      "choices": [
+        {
+          "id": "wall_strategy",
+          "text": "坐进隐官一脉，先把每条命算清楚",
+          "target": "great_ending",
+          "hint": "多算一步，便少送一条命"
+        },
+        {
+          "id": "wall_front",
+          "text": "走上城头，替后来人多挡一刻",
+          "target": "great_ending",
+          "hint": "站到风口，把时间留给后来人"
+        },
+        {
+          "id": "wall_heart",
+          "text": "把个人喜怒放到战事之后",
+          "target": "great_ending",
+          "hint": "把情绪放下，只留下该做的事"
+        }
+      ]
+    },
+    "great_ending": {
+      "id": "great_ending",
+      "title": "第五节：大结局，人间有灯",
+      "subtitle": "万里路走到最后，不是为了让一个人无敌，而是让更多人有路可走。",
+      "progressLabel": "第 5/5 节",
+      "background": "final_lamp",
+      "illustration": "final_lamp",
+      "content": [
+        "许多年后，陈平安再回头看，泥瓶巷、书简湖、落魄山、剑气长城，都不像一段段孤立的故事，更像同一条路上的不同风雪。",
+        "那串糖葫芦早就没了味道，可它留下的问题还在：什么东西可以拿，什么东西不能拿；什么账可以慢慢还，什么底线一步也不能退。",
+        "大结局不是所有敌人都消失，也不是所有遗憾都圆满。大结局是有人在山上点灯，有人在城头守风，有人在远方继续走路，而那个曾经空着手的少年，终于把自己的道理走成了一条人间路。"
+      ],
+      "choices": []
+    },
+    "klein_start": {
+      "id": "klein_start",
+      "title": "第一节：克莱恩醒在廷根",
+      "subtitle": "陌生房间、陌生记忆、陌生时代，先活下去才有资格寻找真相。",
+      "progressLabel": "第 1/5 节",
+      "background": "tingen_night",
+      "illustration": "tingen_night",
+      "content": [
+        "克莱恩在一间狭小房间里醒来。窗外有煤气灯，桌上有旧书、墨水和凌乱纸页，脑中却像多了一整座不属于自己的城市。",
+        "他很快意识到，真正危险的不是陌生世界，而是自己已经站在神秘与疯狂的门缝里。每一个名字、每一行笔记、每一次敲门声，都可能把他推向更深的雾。",
+        "这一刻，他不能当英雄，也不能当疯子。他首先要做一个清醒的人。"
+      ],
+      "choices": [
+        {
+          "id": "klein_choose_calm",
+          "text": "先整理房间与笔记，确认危险从哪里来",
+          "target": "klein_calm",
+          "hint": "先弄清危险，再决定往哪走"
+        },
+        {
+          "id": "klein_choose_nighthawk",
+          "text": "主动靠近值夜者，给自己找一层灯下的保护",
+          "target": "klein_nighthawk",
+          "hint": "靠近光，也靠近新的规矩"
+        },
+        {
+          "id": "klein_choose_fog",
+          "text": "试探灰雾，把未知变成唯一的底牌",
+          "target": "klein_fog_first",
+          "hint": "未知很危险，也可能是唯一底牌"
+        }
+      ]
+    },
+    "klein_calm": {
+      "id": "klein_calm",
+      "title": "先活下来",
+      "progressLabel": "第 1/5 节",
+      "background": "tingen_night",
+      "illustration": "tingen_night",
+      "content": [
+        "克莱恩把能看懂的线索重新排了一遍，又把看不懂的部分圈出来。他没有急着解释一切，只先判断哪些东西会立刻要命。",
+        "谨慎有时不是胆小，而是在黑暗里给自己留一根火柴。"
+      ],
+      "choices": [
+        {
+          "id": "klein_calm_to_nighthawk",
+          "text": "把线索带到更亮的地方",
+          "target": "klein_nighthawk_trial",
+          "hint": "去见值夜者的灯"
+        }
+      ]
+    },
+    "klein_nighthawk": {
+      "id": "klein_nighthawk",
+      "title": "灯下的保护",
+      "progressLabel": "第 1/5 节",
+      "background": "tingen_night",
+      "illustration": "tingen_night",
+      "content": [
+        "克莱恩选择站到灯下。官方的力量未必温柔，却能挡住许多无声靠近的影子。",
+        "他知道自己不能把秘密全交出去，但也不能一个人在深夜里和未知硬扛。"
+      ],
+      "choices": [
+        {
+          "id": "klein_nighthawk_to_trial",
+          "text": "跟随小队，学习黑夜里的规矩",
+          "target": "klein_nighthawk_trial",
+          "hint": "成为夜色里清醒的一员"
+        }
+      ]
+    },
+    "klein_fog_first": {
+      "id": "klein_fog_first",
+      "title": "雾中的底牌",
+      "progressLabel": "第 1/5 节",
+      "background": "gray_fog",
+      "illustration": "gray_fog",
+      "content": [
+        "克莱恩触碰了那片难以解释的灰雾。那里安静、空旷，像一座只属于秘密的大厅。",
+        "他还很弱小，却突然拥有了一张足够吓人的面具。面具可以保命，也可能把人带到更高、更冷的地方。"
+      ],
+      "choices": [
+        {
+          "id": "klein_fog_to_nighthawk",
+          "text": "带着底牌，回到现实的灯下",
+          "target": "klein_nighthawk_trial",
+          "hint": "雾不能替人生活"
+        }
+      ]
+    },
+    "klein_nighthawk_trial": {
+      "id": "klein_nighthawk_trial",
+      "title": "第二节：值夜者的灯",
+      "subtitle": "守夜不是因为不怕黑，而是因为有人必须站在黑暗前面。",
+      "progressLabel": "第 2/5 节",
+      "background": "tingen_night",
+      "illustration": "tingen_night",
+      "content": [
+        "克莱恩加入了守夜的人群。他学会辨认失控的征兆，学会把恐惧藏进礼貌，也学会在队友的玩笑里短暂忘记自己身处异乡。",
+        "越靠近神秘，他越明白平凡生活的珍贵。早餐、薪水、家人的笑声，都比那些听起来宏大的力量更能拴住一个人的心。",
+        "可危险不会因为他眷恋平凡就停下脚步。值夜者的灯照亮了路，也照出了更深的影子。"
+      ],
+      "choices": [
+        {
+          "id": "klein_guard_city",
+          "text": "先守住廷根，把眼前的人放在最前面",
+          "target": "klein_tarot_trial",
+          "hint": "把街灯下的普通人先护住"
+        },
+        {
+          "id": "klein_trace_truth",
+          "text": "追查幕后线索，不让灾祸只留下谜团",
+          "target": "klein_tarot_trial",
+          "hint": "谜团不能只留给死者"
+        },
+        {
+          "id": "klein_keep_human",
+          "text": "记住队友和家人，给自己留住人味",
+          "target": "klein_tarot_trial",
+          "hint": "记住他们，也是在记住自己"
+        }
+      ]
+    },
+    "klein_tarot_trial": {
+      "id": "klein_tarot_trial",
+      "title": "第三节：灰雾上的塔罗会",
+      "subtitle": "越是弱小，越要把每一次开口都说得像有回声。",
+      "progressLabel": "第 3/5 节",
+      "background": "gray_fog",
+      "illustration": "tarot_table",
+      "content": [
+        "灰雾之上，长桌旁多了一个又一个座位。克莱恩坐在首位，表面像能俯瞰命运，心里却还在飞快计算每一句话会不会露馅。",
+        "塔罗会最初像一场精心维持的误会，后来却慢慢变成了互相扶持的网络。情报、交易、提醒和善意，都在雾中交错。",
+        "他开始明白，所谓神秘组织不只是威严与面具，也可以是一群人隔着遥远距离，努力把彼此从危险里拉出来。"
+      ],
+      "choices": [
+        {
+          "id": "klein_fool_mask",
+          "text": "稳住愚者的姿态，让面具先保护所有人",
+          "target": "klein_faceless_trial",
+          "hint": "面具戴稳，心不能被面具带走"
+        },
+        {
+          "id": "klein_share_info",
+          "text": "谨慎交换情报，让同伴也能变强",
+          "target": "klein_faceless_trial",
+          "hint": "让雾上的每个座位都更安全"
+        },
+        {
+          "id": "klein_remember_small",
+          "text": "把每个求助都当成真实的人，而不是棋子",
+          "target": "klein_faceless_trial",
+          "hint": "别把求助的人当作棋子"
+        }
+      ]
+    },
+    "klein_faceless_trial": {
+      "id": "klein_faceless_trial",
+      "title": "第四节：无面人与世界",
+      "subtitle": "换过很多身份之后，名字反而成了最难守住的东西。",
+      "progressLabel": "第 4/5 节",
+      "background": "faceless_mask",
+      "illustration": "faceless_mask",
+      "content": [
+        "克莱恩离开熟悉的街灯，走进更广阔也更危险的舞台。他学会扮演不同身份，学会从陌生人的表情里借一张脸，也学会在热闹人群中保持沉默。",
+        "他可以是侦探，可以是冒险家，可以是灰雾上的愚者，也可以是塔罗会里沉默的世界。每一个身份都好用，每一个身份也都在消耗他。",
+        "当力量越来越接近神性，他必须反复确认：自己不是被角色推着走的人，而是仍然愿意为普通人停步的克莱恩。"
+      ],
+      "choices": [
+        {
+          "id": "klein_keep_name",
+          "text": "把真实名字藏好，但不把真实自己丢掉",
+          "target": "klein_fool_ending",
+          "hint": "名字可以隐藏，自己不能弄丢"
+        },
+        {
+          "id": "klein_save_more",
+          "text": "接受更高位置，只为了能护住更多人",
+          "target": "klein_fool_ending",
+          "hint": "站得更高，是为了挡住更多风"
+        },
+        {
+          "id": "klein_laugh_dark",
+          "text": "在黑暗里保留一点幽默，提醒自己还是人",
+          "target": "klein_fool_ending",
+          "hint": "还能笑出来，就还没有彻底沉下去"
+        }
+      ]
+    },
+    "klein_fool_ending": {
+      "id": "klein_fool_ending",
+      "title": "第五节：大结局，灰雾里有一盏灯",
+      "subtitle": "终局不是变成冷冰冰的神，而是在最高处仍然记得回家的路。",
+      "progressLabel": "第 5/5 节",
+      "background": "fool_lamp",
+      "illustration": "fool_lamp",
+      "content": [
+        "很久以后，克莱恩再回望这条路，廷根的煤气灯、值夜者的办公室、灰雾上的长桌、无数张借来的面孔，都像一层层叠在一起的梦。",
+        "他曾经靠面具活下来，靠谨慎走远，靠朋友和记忆一次次把自己从非人的边缘拉回来。越接近高处，他越知道不能让神性吃掉所有笑声。",
+        "大结局不是所有谜团都温柔地解开，而是灰雾深处仍有一盏小灯。灯下坐着的，不只是愚者，也还是那个会害怕、会吐槽、会想回家的克莱恩。"
+      ],
+      "choices": []
+    }
+  }
+}

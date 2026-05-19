@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="mountain gate with lamp">
+  <defs>
+    <linearGradient id="mount" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#314238"/>
+      <stop offset="0.55" stop-color="#18201a"/>
+      <stop offset="1" stop-color="#4c3922"/>
+    </linearGradient>
+    <radialGradient id="gateGlow" cx="50%" cy="47%" r="42%">
+      <stop offset="0" stop-color="#f0c06c" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#f0c06c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#mount)"/>
+  <rect width="1280" height="720" fill="url(#gateGlow)"/>
+  <path d="M0 720 310 250l210 236 162-314 250 338 170-168 178 378Z" fill="#0d1210" opacity="0.62"/>
+  <rect x="398" y="258" width="64" height="288" rx="8" fill="#5c3f27"/>
+  <rect x="818" y="258" width="64" height="288" rx="8" fill="#5c3f27"/>
+  <rect x="348" y="230" width="584" height="54" rx="8" fill="#7a5631"/>
+  <rect x="414" y="304" width="452" height="24" rx="6" fill="#3b2b1c"/>
+  <circle cx="640" cy="400" r="44" fill="#efc56f"/>
+  <path d="M640 332v188" stroke="#7a5631" stroke-width="10" stroke-linecap="round"/>
+  <path d="M504 570c84-42 188-42 272 0" stroke="#e8c486" stroke-width="7" opacity="0.42"/>
+</svg>

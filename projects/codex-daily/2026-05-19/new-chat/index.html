@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>起点角色人格测试</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317201a'/%3E%3Cpath d='M16 12h25a8 8 0 0 1 8 8v32H24a8 8 0 0 0-8 8V12Z' fill='%23fffdf7'/%3E%3Cpath d='M25 24h16M25 32h18M25 40h12' stroke='%23b95b63' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="activity-panel" aria-label="起点角色人格测试">
+        <header class="brand-row">
+          <div>
+            <p class="eyebrow">起点角色人格测试</p>
+            <h1>测测你是哪位起点小说人物</h1>
+          </div>
+          <div class="privacy-pill">12题开测</div>
+        </header>
+
+        <section class="quiz-layout" id="quizView">
+          <aside class="progress-panel" aria-label="测试进度">
+            <div class="book-scene" aria-hidden="true">
+              <span class="book book-a"></span>
+              <span class="book book-b"></span>
+              <span class="book book-c"></span>
+              <span class="lamp"></span>
+              <span class="light"></span>
+            </div>
+            <div class="progress-copy">
+              <p class="eyebrow">剧情进度</p>
+              <strong id="progressText">1 / 12</strong>
+              <div class="progress-bar" aria-hidden="true">
+                <span id="progressFill"></span>
+              </div>
+            </div>
+            <div class="fate-preview" id="fatePreview"></div>
+          </aside>
+
+          <section class="question-card" aria-live="polite">
+            <div class="question-meta">
+              <span id="questionChapter">第一章</span>
+              <span id="questionMood">开局选择</span>
+            </div>
+            <h2 id="questionTitle"></h2>
+            <div class="option-grid" id="optionGrid"></div>
+            <div class="question-actions">
+              <button class="secondary-button" id="backButton" type="button">上一题</button>
+              <button class="ghost-button" id="restartButton" type="button">重开</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="result-section" id="resultView" hidden aria-live="polite">
+          <div class="result-card">
+            <div class="character-cover" id="characterCover">
+              <img class="cover-art" id="characterCoverArt" alt="" />
+              <div class="cover-symbol" id="characterMark"></div>
+              <div class="cover-bottom">
+                <p id="characterWork"></p>
+                <h2 id="characterName"></h2>
+              </div>
+            </div>
+            <div class="result-content">
+              <p class="result-kicker">你的起点角色人格</p>
+              <h2 id="resultName"></h2>
+              <p class="character-genre" id="resultWork"></p>
+              <div class="score-row">
+                <span id="scoreValue">0%</span>
+                <div class="score-bar" aria-hidden="true">
+                  <span id="scoreFill"></span>
+                </div>
+              </div>
+              <p class="result-reason" id="characterReason"></p>
+              <div class="tag-row" id="tagRow"></div>
+              <div class="story-grid" id="storyGrid"></div>
+              <div class="action-row">
+                <button class="secondary-button" id="againButton" type="button">再测一次</button>
+                <button class="primary-button compact" id="posterButton" type="button">生成海报</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-panel" id="characterProfile">
+            <div class="profile-illustration" id="profileIllustration" aria-hidden="true"></div>
+            <div class="profile-copy">
+              <p class="eyebrow">角色档案</p>
+              <h2 id="profileName"></h2>
+              <p class="profile-work" id="profileWork"></p>
+              <p class="profile-intro" id="profileIntro"></p>
+              <div class="profile-hook" id="profileHook"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="poster-section" id="posterSection" hidden aria-label="分享海报">
+          <div class="poster-preview">
+            <canvas id="posterCanvas" width="900" height="1200"></canvas>
+          </div>
+          <div class="poster-copy">
+            <p class="eyebrow">活动分享</p>
+            <h2>把角色人格发给好友</h2>
+            <p>海报会生成本次匹配角色、作品来源、相似度和关键词。</p>
+            <a class="secondary-button link-button" id="downloadPoster" download="qidian-character-poster.png">下载海报</a>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "id": "novel-fanart-source-map",
+  "title": "小说二创人物图来源地图",
+  "updatedAt": "2026-05-19",
+  "policy": {
+    "goal": "寻找高质量二创/官设/活动视觉，用于风格参考和后续原创重绘。",
+    "allowed": ["抓取公开页面标题、作者、标签、缩略图 URL、原页面链接", "生成本地 moodboard 供内部评审", "记录哪些平台值得人工筛选"],
+    "avoid": ["绕过登录、验证码、WAF 或付费墙", "批量下载高清原图用于正式发布", "抹掉作者署名或来源链接"]
+  },
+  "platforms": [
+    {
+      "id": "qidian-yuewen-official",
+      "name": "起点读书 / 阅文官方活动",
+      "quality": "high",
+      "crawlability": "medium",
+      "bestFor": ["官方 KV", "IP 活动视觉", "动画/联运专题"],
+      "notes": "官方活动页常在 App Store event、阅文新闻或起点 App 内；网页端可抓到部分 KV，但原图版权归官方。",
+      "recommendedUse": "作为角色比例、色调、IP 级主视觉参考。"
+    },
+    {
+      "id": "fandom-gallery",
+      "name": "诡秘之主 Wiki / Fandom 图片库",
+      "quality": "high",
+      "crawlability": "medium",
+      "bestFor": ["官设图", "动画设定", "身份变化", "历年生贺索引"],
+      "notes": "浏览器可访问，脚本端常被 Cloudflare 挑战；适合用人工种子或浏览器采集。",
+      "recommendedUse": "建立克莱恩不同身份的风格锚点。"
+    },
+    {
+      "id": "zcool",
+      "name": "站酷 ZCOOL",
+      "quality": "high",
+      "crawlability": "low",
+      "bestFor": ["国内插画师作品集", "同人图合集", "商业插画质感"],
+      "notes": "搜索结果质量不错，但脚本端容易触发 WAF；建议只收页面链接，图片由人工点开筛选。",
+      "recommendedUse": "找画风和构图，后续自己重绘。"
+    },
+    {
+      "id": "huashi6",
+      "name": "触站",
+      "quality": "high",
+      "crawlability": "low",
+      "bestFor": ["付费委托", "同人立绘", "高清图"],
+      "notes": "脚本端可能 403；页面标注作者和发布时间，适合人工收藏和授权沟通。",
+      "recommendedUse": "找人物立绘参考，不直接搬图。"
+    },
+    {
+      "id": "lofter",
+      "name": "LOFTER",
+      "quality": "very-high",
+      "crawlability": "very-low",
+      "bestFor": ["国内同人核心社区", "角色 CP", "长图/条漫", "高质量粉丝插画"],
+      "notes": "高质量内容很多，但登录和 App 限制强；不建议脚本爬，适合人工筛选链接。",
+      "recommendedUse": "人工找风格样本，再让我们生成原创等价图。"
+    },
+    {
+      "id": "bilibili",
+      "name": "哔哩哔哩",
+      "quality": "medium-high",
+      "crawlability": "medium",
+      "bestFor": ["手书", "绘画过程", "视频封面", "角色氛围"],
+      "notes": "适合抓视频标题、封面和作者，不适合从视频中批量截帧。",
+      "recommendedUse": "找动态构图、Q 版或情绪场景。"
+    },
+    {
+      "id": "pixiv",
+      "name": "Pixiv",
+      "quality": "high",
+      "crawlability": "low",
+      "bestFor": ["海外/日系 fanart", "标签检索", "插画收藏"],
+      "notes": "通常需要登录和平台 API，不建议无授权爬取。",
+      "recommendedUse": "人工收藏链接，按风格重绘。"
+    },
+    {
+      "id": "artstation-deviantart",
+      "name": "ArtStation / DeviantArt",
+      "quality": "high",
+      "crawlability": "medium",
+      "bestFor": ["海外高完成度 fanart", "角色设计", "概念艺术"],
+      "notes": "公开页面能取标题和预览图，但多数标注 All rights reserved。",
+      "recommendedUse": "做风格参考和作者索引。"
+    },
+    {
+      "id": "huaban-duitang",
+      "name": "花瓣 / 堆糖",
+      "quality": "mixed",
+      "crawlability": "medium",
+      "bestFor": ["聚合发现", "反向找作者", "灵感板"],
+      "notes": "常是转载聚合，作者和授权信息不稳定；只适合发现线索。",
+      "recommendedUse": "找入口，不作为最终素材来源。"
+    }
+  ]
+}

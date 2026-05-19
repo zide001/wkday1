@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="red rose under stage light">
+  <defs>
+    <radialGradient id="light" cx="50%" cy="30%" r="48%">
+      <stop offset="0" stop-color="#ffe0a6" stop-opacity="0.76"/>
+      <stop offset="1" stop-color="#1a1416" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stage" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#391d29"/>
+      <stop offset="1" stop-color="#111617"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#stage)"/>
+  <rect width="1280" height="720" fill="url(#light)"/>
+  <ellipse cx="640" cy="540" rx="330" ry="76" fill="#e7b35f" opacity="0.18"/>
+  <path d="M642 512c-18-90-10-172 24-248" stroke="#496b46" stroke-width="14" stroke-linecap="round"/>
+  <path d="M656 368c66-22 120 24 110 78-8 46-72 72-132 38-64 28-124-2-130-50-8-62 74-104 152-66Z" fill="#a81f33"/>
+  <path d="M620 366c-18-58 54-104 104-70 48 32 22 98-48 112Z" fill="#d54552"/>
+  <path d="M584 452c-80-10-134 26-160 80 86 8 148-18 184-78Z" fill="#426d45"/>
+  <g stroke="#f1ca86" stroke-width="4" opacity="0.36">
+    <line x1="472" y1="90" x2="596" y2="292"/>
+    <line x1="812" y1="90" x2="688" y2="292"/>
+  </g>
+</svg>

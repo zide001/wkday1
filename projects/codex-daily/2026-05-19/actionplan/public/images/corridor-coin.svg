@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="coin at the end of paper corridor">
+  <defs>
+    <linearGradient id="hall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1b2c34"/>
+      <stop offset="0.55" stop-color="#111315"/>
+      <stop offset="1" stop-color="#3a2a1e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="42%">
+      <stop offset="0" stop-color="#f1c573" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f1c573" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#hall)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <path d="M124 720 526 132h228l402 588Z" fill="#080c0d" opacity="0.52"/>
+  <g fill="#d9c49c" opacity="0.68">
+    <path d="M202 620 520 150h40L334 620Z"/>
+    <path d="M1080 620 760 150h-40l226 470Z"/>
+    <path d="M400 624 574 148h28L512 624Z"/>
+    <path d="M880 624 706 148h-28l90 476Z"/>
+  </g>
+  <ellipse cx="640" cy="414" rx="92" ry="118" fill="#e4b95c"/>
+  <ellipse cx="640" cy="414" rx="56" ry="84" fill="#ffe19a"/>
+  <path d="M620 414h40m-20-22v44" stroke="#75501e" stroke-width="10" stroke-linecap="round"/>
+</svg>

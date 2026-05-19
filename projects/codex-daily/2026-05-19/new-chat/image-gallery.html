@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自生成动漫角色图看板</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --ink: #17201a;
+        --muted: #5c6862;
+        --paper: #f7f8f4;
+        --line: rgba(23, 32, 26, 0.13);
+        --green: #2f6f5d;
+        --wine: #9a4f5a;
+        --gold: #ba8947;
+        --blue: #315d7d;
+      }
+
+      body {
+        margin: 0;
+        background:
+          linear-gradient(180deg, #eef4ef 0, #f7f8f4 34%, #ffffff 100%);
+        color: var(--ink);
+        font-family:
+          Inter, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      main {
+        min-height: 100vh;
+      }
+
+      .shell {
+        width: min(1320px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 34px 0 26px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 860px;
+        font-size: clamp(2rem, 5vw, 4.2rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+        color: var(--green);
+        font-size: 0.84rem;
+        font-weight: 900;
+      }
+
+      .kicker::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--green);
+        content: "";
+      }
+
+      .hero-copy {
+        max-width: 780px;
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.72);
+        color: #21352e;
+        font-weight: 900;
+      }
+
+      .score-strip {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .stat {
+        min-height: 96px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .stat strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: clamp(1.6rem, 4vw, 2.6rem);
+        line-height: 1;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+
+      .section {
+        padding: 30px 0 10px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 2.5vw, 2rem);
+        letter-spacing: 0;
+      }
+
+      .section-note {
+        max-width: 580px;
+        color: var(--muted);
+        font-size: 0.94rem;
+        line-height: 1.6;
+      }
+
+      .source-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .source {
+        display: grid;
+        min-height: 128px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .source h3 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        letter-spacing: 0;
+      }
+
+      .source p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .source small {
+        align-self: end;
+        margin-top: 14px;
+        color: var(--green);
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        display: grid;
+        grid-column: span 3;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 18px 34px rgba(33, 54, 47, 0.08);
+      }
+
+      .card.wide {
+        grid-column: span 6;
+      }
+
+      .image-box {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        background: #e9efeb;
+      }
+
+      .wide .image-box {
+        min-height: 300px;
+      }
+
+      .image-box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+        object-position: var(--pos, center center);
+      }
+
+      .badge-row {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        padding: 0 9px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.88);
+        color: #1e352e;
+        font-size: 0.76rem;
+        font-weight: 900;
+      }
+
+      .badge.hot {
+        background: rgba(47, 111, 93, 0.92);
+        color: #ffffff;
+      }
+
+      .badge.warn {
+        background: rgba(186, 137, 71, 0.94);
+        color: #ffffff;
+      }
+
+      .meta {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+      }
+
+      .meta-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .name {
+        display: grid;
+        gap: 4px;
+      }
+
+      .name h3 {
+        font-size: 1.05rem;
+        letter-spacing: 0;
+      }
+
+      .name span {
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .grade {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: #e4f0eb;
+        color: var(--green);
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .grade.reserve {
+        background: #f4ead8;
+        color: #8a5b20;
+      }
+
+      .grade.reject {
+        background: #f5e4e7;
+        color: #8f3c4c;
+      }
+
+      .meta p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .file {
+        overflow-wrap: anywhere;
+        color: #31433c;
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .source-link {
+        color: var(--blue);
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .compact {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .compact .card {
+        grid-column: span 1;
+        box-shadow: none;
+      }
+
+      .compact .image-box {
+        min-height: 230px;
+      }
+
+      .pool {
+        padding-bottom: 42px;
+      }
+
+      @media (max-width: 1040px) {
+        .source-grid,
+        .score-strip {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .card,
+        .card.wide {
+          grid-column: span 6;
+        }
+
+        .compact {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 680px) {
+        .shell {
+          width: min(100% - 22px, 1320px);
+        }
+
+        .hero-top,
+        .section-head {
+          display: grid;
+        }
+
+        .nav {
+          justify-content: flex-start;
+        }
+
+        .source-grid,
+        .score-strip,
+        .compact {
+          grid-template-columns: 1fr;
+        }
+
+        .card,
+        .card.wide {
+          grid-column: span 12;
+        }
+
+        .image-box,
+        .wide .image-box {
+          min-height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div class="shell">
+          <div class="hero-top">
+            <div>
+              <div class="kicker">动漫二创图源候选</div>
+              <h1>全角色自生成动漫图，直接进结果页</h1>
+              <p class="hero-copy">
+                这版主池改成全自生成 2D 动漫角色图：统一竖版角色卡、统一高精插画质感，公开爬图只保留为参考和备选，不再影响结果页观感。
+              </p>
+            </div>
+            <nav class="nav" aria-label="页面导航">
+              <a href="./index.html">返回活动页</a>
+              <a href="#sources">方案</a>
+              <a href="#confirmed">自生成主池</a>
+              <a href="#backlog">备选图源</a>
+            </nav>
+          </div>
+
+          <div class="score-strip" aria-label="自生成图片概览">
+            <div class="stat"><strong>12</strong><span>角色全部生成同系列动漫竖版图</span></div>
+            <div class="stat"><strong>12</strong><span>已经接入活动结果页</span></div>
+            <div class="stat"><strong>92%</strong><span>WebP 压缩后单图约 280-450KB</span></div>
+            <div class="stat"><strong>0</strong><span>主池不再混入真人剧照或 3D 截图</span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section" id="sources">
+        <div class="shell">
+          <div class="section-head">
+            <h2>生成方案</h2>
+            <p class="section-note">按角色简介重新生成，不照搬公开物料；公开图源继续作为风格和角色识别校验。</p>
+          </div>
+          <div class="source-grid">
+            <a class="source" href="./assets/characters-ai/contact-ai.jpg" target="_blank" rel="noreferrer">
+              <h3>自生成 / 角色卡主池</h3>
+              <p>每个角色按人物气质、场景、道具、色彩重新生成，统一 2D 动漫插画质感。</p>
+              <small>assets/characters-ai</small>
+            </a>
+            <a class="source" href="https://www.huashi6.com/draw/1691656" target="_blank" rel="noreferrer">
+              <h3>触站 / 可继续补源</h3>
+              <p>保留大图爬取链路，适合后续继续补官方可用素材和二创候选。</p>
+              <small>huashi6.com</small>
+            </a>
+            <a class="source" href="https://www.zcool.com.cn/work/ZNTMxNzgzNTY%3D.html?from=SearchCollections" target="_blank" rel="noreferrer">
+              <h3>站酷 / 美宣参考</h3>
+              <p>作为完成度和构图参考，不直接决定结果页主图。</p>
+              <small>zcool.com.cn</small>
+            </a>
+            <a class="source" href="https://the-kings-avatar.fandom.com/wiki/Ye_Xiu/Gallery" target="_blank" rel="noreferrer">
+              <h3>Fandom / 角色识别参考</h3>
+              <p>用于比对角色服饰和道具方向，主图仍用自生成版本。</p>
+              <small>fandom.com</small>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="confirmed">
+        <div class="shell">
+          <div class="section-head">
+            <h2>自生成主池</h2>
+            <p class="section-note">这 12 张已经接入测试结果页，男女角色都在局里，统一动漫角色卡规格。</p>
+          </div>
+          <div class="gallery" id="confirmedGallery"></div>
+        </div>
+      </section>
+
+      <section class="section" id="backlog">
+        <div class="shell">
+          <div class="section-head">
+            <h2>公开备选图源</h2>
+            <p class="section-note">这些保留给后续 A/B 或官方替换，不再作为当前主视觉。</p>
+          </div>
+          <div class="gallery compact" id="backlogGallery"></div>
+        </div>
+      </section>
+
+      <section class="section pool" id="rejected">
+        <div class="shell">
+          <div class="section-head">
+            <h2>不进主池</h2>
+            <p class="section-note">不是说不能用，而是不符合这一轮“全动漫二创图”的方向。</p>
+          </div>
+          <div class="gallery compact" id="rejectedGallery"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const confirmed = [
+        {
+          name: "克莱恩·莫雷蒂",
+          work: "《诡秘之主》",
+          file: "assets/characters-ai/klein.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/klein.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "维多利亚神秘感、礼帽、手杖和雾夜城市都保留了。",
+          pos: "center 14%",
+        },
+        {
+          name: "许七安",
+          work: "《大奉打更人》",
+          file: "assets/characters-ai/xu-qian.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/xu-qian.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "打更人、探案、古都夜色和松弛聪明劲儿都在。",
+          pos: "center 14%",
+        },
+        {
+          name: "叶修",
+          work: "《全职高手》",
+          file: "assets/characters-ai/ye-xiu.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/ye-xiu.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "电竞房、键鼠、赛场投影和低调王者感统一成竖版。",
+          pos: "center 15%",
+        },
+        {
+          name: "韩立",
+          work: "《凡人修仙传》",
+          file: "assets/characters-ai/han-li.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/han-li.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "白衣修士、山雾、符箓和谨慎修仙气质都比较稳。",
+          pos: "center 16%",
+        },
+        {
+          name: "萧炎",
+          work: "《斗破苍穹》",
+          file: "assets/characters-ai/xiao-yan.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/xiao-yan.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "异火、重尺、黑袍和逆风翻盘的少年燃感更强。",
+          pos: "center 14%",
+        },
+        {
+          name: "宁缺",
+          work: "《将夜》",
+          file: "assets/characters-ai/ning-que.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/ning-que.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "把真人感去掉了，改成荒原、弓刀、风雪里的动漫角色卡。",
+          pos: "center 15%",
+        },
+        {
+          name: "奥黛丽·霍尔",
+          work: "《诡秘之主》",
+          file: "assets/characters-ai/audrey.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/audrey.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "绿裙、庄园、观察者气质和温柔但清醒的感觉比较明确。",
+          pos: "center 14%",
+        },
+        {
+          name: "怀庆",
+          work: "《大奉打更人》",
+          file: "assets/characters-ai/huai-qing.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/huai-qing.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "宫廷、奏折、红金礼服和理性掌局的压场感更完整。",
+          pos: "center 13%",
+        },
+        {
+          name: "唐柔",
+          work: "《全职高手》",
+          file: "assets/characters-ai/tang-rou.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/tang-rou.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "电竞舞台和战斗法师投影结合，挑战感更明显。",
+          pos: "center 14%",
+        },
+        {
+          name: "萧薰儿",
+          work: "《斗破苍穹》",
+          file: "assets/characters-ai/xun-er.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/xun-er.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "月夜、莲池、金色火光和温柔底牌感统一在一张图里。",
+          pos: "center 14%",
+        },
+        {
+          name: "美杜莎女王",
+          work: "《斗破苍穹》",
+          file: "assets/characters-ai/medusa.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/medusa.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "女王、沙漠宫殿、蛇纹魔法和高压气场都更直观。",
+          pos: "center 13%",
+        },
+        {
+          name: "桑桑",
+          work: "《将夜》",
+          file: "assets/characters-ai/sang-sang.webp",
+          source: "AI 自生成",
+          sourceUrl: "./assets/characters-ai/sang-sang.png",
+          grade: "已接入",
+          tags: ["自生成", "2D", "结果页"],
+          note: "雨夜、黑伞、朴素旅装和宿命感比原来素材更贴。",
+          pos: "center 13%",
+        },
+      ];
+
+      const backlog = [
+        {
+          name: "自生成总览",
+          work: "12 角色",
+          file: "assets/characters-ai/contact-ai.jpg",
+          source: "本地接触表",
+          sourceUrl: "./assets/characters-ai/contact-ai.jpg",
+          grade: "总览",
+          tags: ["总览", "AI", "12张"],
+          note: "用于快速横向比较这一套角色卡的统一感。",
+          pos: "center top",
+        },
+        {
+          name: "公开候选总览",
+          work: "爬取素材",
+          file: "assets/characters-hires/contact-candidates.jpg",
+          source: "爬图候选",
+          sourceUrl: "./assets/characters-hires/contact-candidates.jpg",
+          grade: "备选",
+          tags: ["备选", "公开图源"],
+          note: "保留给后续人工挑图或官方替换。",
+          pos: "center top",
+        },
+        {
+          name: "触站斗破候选",
+          work: "《斗破苍穹》",
+          file: "assets/characters-hires/xiao-yan-huashi-1.jpg",
+          source: "触站",
+          sourceUrl: "https://www.huashi6.com/draw/1448827",
+          grade: "备选",
+          tags: ["备选", "2D"],
+          note: "单角色匹配度不如自生成，但可作为后续参考。",
+          pos: "center center",
+        },
+        {
+          name: "站酷斗破候选",
+          work: "《斗破苍穹》",
+          file: "assets/characters-hires/btth-zcool-1.jpg",
+          source: "站酷",
+          sourceUrl: "https://www.zcool.com.cn/work/ZNjM5ODY2ODg%3D.html",
+          grade: "备选",
+          tags: ["备选", "2D"],
+          note: "画面完成度高，但角色结果页需要更明确的单人识别。",
+          pos: "center center",
+        },
+      ];
+
+      const rejected = [
+        {
+          name: "萧炎 3D 截图",
+          work: "《斗破苍穹》",
+          file: "assets/characters-hires/xiao-yan-dou-sheng.png",
+          source: "Fandom",
+          sourceUrl: "https://battle-through-the-heavens.fandom.com/wiki/Xiao_Yan/Image_Gallery",
+          grade: "不进主池",
+          note: "清晰但偏 3D 动画截图，不符合这轮全动漫二创图方向。",
+          pos: "center center",
+        },
+        {
+          name: "萧薰儿 3D 截图",
+          work: "《斗破苍穹》",
+          file: "assets/characters-hires/xun-er-dou-sheng221.png",
+          source: "Fandom",
+          sourceUrl: "https://battle-through-the-heavens.fandom.com/wiki/Gu_Xun%27er/Image_Gallery",
+          grade: "不进主池",
+          note: "人物清楚，但不是 2D 插画。",
+          pos: "center center",
+        },
+        {
+          name: "桑桑真人剧照",
+          work: "《将夜》",
+          file: "assets/characters-hires/sang-sang-newton-2.jpg",
+          source: "Newton",
+          sourceUrl: "./assets/characters-hires/sang-sang-newton-2.jpg",
+          grade: "不进主池",
+          note: "真人剧照，直接剔除。",
+          pos: "center center",
+        },
+        {
+          name: "宁缺真人剧照",
+          work: "《将夜》",
+          file: "assets/characters-hires/ning-que-newton.jpg",
+          source: "Newton",
+          sourceUrl: "./assets/characters-hires/ning-que-newton.jpg",
+          grade: "不进主池",
+          note: "真人物料，不进这版活动页。",
+          pos: "center top",
+        },
+      ];
+
+      function renderCard(item, mode = "confirmed") {
+        const gradeClass =
+          mode === "rejected" ? "reject" : item.grade.includes("待") ? "reserve" : "";
+        const tags = item.tags || ["候选"];
+        const linkLabel = item.sourceUrl.startsWith("./") ? "打开文件" : "查看来源";
+        const badgeHtml = tags
+          .map((tag, index) => `<span class="badge ${index === 0 ? "hot" : ""}">${tag}</span>`)
+          .join("");
+        return `
+          <article class="card ${item.wide ? "wide" : ""}">
+            <div class="image-box">
+              <img src="./${item.file}" alt="${item.name}" loading="eager" style="--pos: ${item.pos || "center center"}" />
+              <div class="badge-row">${badgeHtml}</div>
+            </div>
+            <div class="meta">
+              <div class="meta-head">
+                <div class="name">
+                  <h3>${item.name}</h3>
+                  <span>${item.work} · ${item.source}</span>
+                </div>
+                <span class="grade ${gradeClass}">${item.grade}</span>
+              </div>
+              <p>${item.note}</p>
+              <div class="file">${item.file}</div>
+              <a class="source-link" href="${item.sourceUrl}" target="_blank" rel="noreferrer">${linkLabel}</a>
+            </div>
+          </article>
+        `;
+      }
+
+      document.getElementById("confirmedGallery").innerHTML = confirmed
+        .map((item) => renderCard(item))
+        .join("");
+      document.getElementById("backlogGallery").innerHTML = backlog
+        .map((item) => renderCard(item, "backlog"))
+        .join("");
+      document.getElementById("rejectedGallery").innerHTML = rejected
+        .map((item) => renderCard(item, "rejected"))
+        .join("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="sealed letter on a desk">
+  <defs>
+    <linearGradient id="desk" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3a2720"/>
+      <stop offset="1" stop-color="#161716"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f0dcc0"/>
+      <stop offset="1" stop-color="#b99d77"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#desk)"/>
+  <ellipse cx="642" cy="420" rx="430" ry="118" fill="#070908" opacity="0.36"/>
+  <path d="M287 208h706c32 0 58 26 58 58v250c0 32-26 58-58 58H287c-32 0-58-26-58-58V266c0-32 26-58 58-58Z" fill="url(#paper)"/>
+  <path d="M244 242 640 445l396-203" fill="none" stroke="#7a5f42" stroke-width="10" opacity="0.55"/>
+  <path d="M252 548 550 392m478 156L730 392" fill="none" stroke="#7a5f42" stroke-width="8" opacity="0.34"/>
+  <circle cx="640" cy="445" r="64" fill="#8e2730"/>
+  <circle cx="640" cy="445" r="36" fill="#b43a3e"/>
+  <path d="M618 438h44m-22-22v44" stroke="#46181c" stroke-width="10" stroke-linecap="round" opacity="0.56"/>
+  <g stroke="#f2c674" stroke-width="3" stroke-linecap="round" opacity="0.24">
+    <line x1="160" y1="100" x2="332" y2="84"/>
+    <line x1="930" y1="150" x2="1112" y2="126"/>
+    <line x1="110" y1="618" x2="260" y2="590"/>
+    <line x1="968" y1="610" x2="1168" y2="580"/>
+  </g>
+</svg>

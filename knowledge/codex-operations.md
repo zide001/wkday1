@@ -20,6 +20,7 @@
 User-level Codex skills mirrored into `skills/`:
 
 - `prd-coach`
+- `wecom-doc-editor`
 - `wedata-abtest-daily-report`
 - `zide-shared-library`
 
@@ -39,3 +40,9 @@ git push
 ## Skill Backup Rule
 
 When the user asks to back up skills, sync from `/Users/yangzide/.codex/skills/` into `wkday1/skills/`, excluding built-in `.system` skills and excluding the nested `zide-shared-library/references/wkday1` copy to avoid recursive repository embedding.
+
+## WeCom PRD Skill Iteration
+
+- The user wants Codex to learn 企业微信文档 operation by actually using the UI when safe, then improve `wecom-doc-editor` from verified lessons.
+- After meaningful 企业微信 PRD skill work, mirror the updated `wecom-doc-editor` skill into `wkday1/skills/wecom-doc-editor/`, add a concise session note for the day when useful, then commit and push to GitHub.
+- Do not store raw private document content, credentials, cookies, or one-off document details in the shared library.

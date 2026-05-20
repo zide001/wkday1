@@ -5,6 +5,7 @@ User-level Codex skills synced from this Mac.
 ## Included
 
 - `prd-coach/`: PRD writing, review, comparison, scoring, and coaching workflow.
+- `wecom-doc-editor/`: Safe 企业微信文档 PRD editing, UI operation learning, table/cell paste verification, and continuous skill improvement.
 - `wedata-abtest-daily-report/`: WorkBuddy/Wedata ABTest crawler and daily report workflow.
 - `zide-shared-library/`: Local skill entrypoint for reading and syncing this shared library.
 

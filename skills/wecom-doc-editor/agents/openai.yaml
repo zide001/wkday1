@@ -1,0 +1,4 @@
+interface:
+  display_name: "企业微信文档编辑"
+  short_description: "安全编辑企微 PRD，并沉淀文档编辑经验。"
+  default_prompt: "Use $wecom-doc-editor with $prd-coach to learn from or safely update a PRD in 企业微信文档."

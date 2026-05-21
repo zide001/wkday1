@@ -11,6 +11,7 @@
 - Prefer durable context to be stored in the Git-backed `wkday1` shared library so other Codex sessions and machines can reuse it.
 - Prefer concise, practical outputs that directly help execution.
 - For ongoing Codex work, preserve useful context as structured knowledge rather than relying only on chat history.
+- For future Codex tasks, prefer starting with or inferring an explicit working role, such as product reviewer, WeCom document editor, experiment analyst, automation engineer, or frontend product engineer.
 - Do not ask for or record passwords, tokens, cookies, webhook URLs, or other secrets in chat or Git.
 
 ## Product / PRD Style

@@ -103,6 +103,48 @@ Writeback decision:
 - Patch owning skills only after a real object-level task reveals a narrower
   repeatable lesson.
 
+### 2026-05-29 - Shared-Library Sync To GitHub
+
+| Field | Value |
+|---|---|
+| Object | skill / workflow |
+| Trigger | User asked to push this AE-Vela daily-work progress, recent skills, and knowledge base updates to `zide001/wkday1` |
+| Flow | Full |
+| Display weight | expanded |
+| Owner | `zide-shared-library`, `daily-work-iteration-protocol.md` |
+| External-visible action | yes, user requested push |
+| Main evidence | commit `249b8e2`, remote `origin/main`, clean post-push status, verifier output |
+| Check used | shared-library sync check: scope reviewed, sensitive scan clean, cached diff check passed, verifier passed, remote hash matched local HEAD |
+| Verdict | pass |
+| Curated | this log |
+
+What improved:
+
+- The Full-only flow was exercised on a real external-visible task rather than
+  only on setup. The task used expanded display because it crossed local files,
+  shared-library knowledge, skills, verification scripts, commit, and remote
+  push.
+- The completion check proved useful: it caught a verifier quoting issue and a
+  trailing blank line before commit, then confirmed the pushed remote hash
+  matched local `HEAD`.
+- Local demo/check artifacts were moved into the shared library so another
+  machine can reuse them instead of depending on the temporary task folder.
+
+Friction or failure:
+
+- The first staged check found one Markdown EOF issue, which was fixed before
+  commit.
+- The verifier initially emitted a shell-noise line from backticks in a search
+  string; the check still passed, but the script was patched to remove the
+  noise before pushing.
+
+Writeback decision:
+
+- Keep as log only. The reusable behavior is already represented in
+  `scripts/verify-daily-work-rollout.sh`,
+  `workflows/agentic-engineering/ae-vela-completion-checks.md`, and
+  `skills/zide-shared-library/SKILL.md`.
+
 ## Pass Criteria For The First Business Trial
 
 The first object-level business trial counts as useful when all are true:

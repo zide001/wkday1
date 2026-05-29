@@ -27,6 +27,7 @@
 """
 
 请先做：
+0. 默认按 Light 模式处理 live doc edit；如果同时涉及 PRD 发布、TAPD、跨文档同步或外部可见动作，先按 `daily-work-task-card.md` 升级到 Full 并明确证据和门禁。
 1. 确认当前可见文档标题和目标文档一致。
 2. 确认目标章节、行、列或光标位置。
 3. 如果内容还不像 PRD 正文，先用 PRD 视角压缩成适合粘贴的版本。
@@ -51,4 +52,5 @@
 
 完成后：
 - 如果这次发现新的企业微信 UI 行为、粘贴规则或 PRD 表格编辑经验，判断是否需要写回 wecom-doc-editor skill。
+- 如果这次是 Full 模式或暴露了可复用摩擦，按 `daily-work-object-field-test-log.md` 记录一条短 field test。
 ```

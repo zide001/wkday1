@@ -1,4 +1,4 @@
 interface:
   display_name: "PRD Coach"
-  short_description: "持续评审、写作和迭代你的 PRD 方法论"
-  default_prompt: "Use $prd-coach to review my PRD against my history and learning examples, then update my next-PRD template."
+  short_description: "按需求类型总结、写作、评审并迭代 PRD"
+  default_prompt: "Use $prd-coach to turn my product context into the right PRD format, choosing the smallest useful structure for WeCom, strategy, AI, data, flow, or complete PRD."

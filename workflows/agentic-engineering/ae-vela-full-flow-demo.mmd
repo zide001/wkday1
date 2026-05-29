@@ -1,0 +1,20 @@
+flowchart TD
+  A["Task arrives"] --> B["Object first<br/>prd / wecom / tapd / report / automation / prototype / code / skill"]
+  B --> C["Flow: Full by default<br/>no Tiny / Light / Full choice"]
+  C --> D{"Display weight"}
+  D --> D1["Silent<br/>small answer: internal loop only"]
+  D --> D2["Compact<br/>normal task: Object + Check"]
+  D --> D3["Expanded<br/>cross-system or external action"]
+  D1 --> E["Work"]
+  D2 --> E
+  D3 --> F["State + Handoff<br/>target, evidence, constraints"]
+  F --> E
+  E --> G["Completion Check<br/>local proof before done"]
+  G --> H{"External-visible action?"}
+  H -- "yes" --> I["Preview + user confirmation<br/>submit / send / publish / push"]
+  H -- "no" --> J["Closeout"]
+  I --> J
+  J --> K["Ledger row<br/>changed, verified, risk, curated"]
+  K --> L{"Reusable lesson?"}
+  L -- "no" --> M["Curated: none"]
+  L -- "yes" --> N["Write back narrowly<br/>owning skill / workflow"]

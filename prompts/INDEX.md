@@ -8,6 +8,8 @@
 - `wecom-doc-edit.md`：企业微信文档/PRD 表格的安全编辑。
 - `abtest-daily-analysis.md`：ABTest 日报、实验判断和行动清单。
 - `frontend-tool-build.md`：前端小工具、页面和可交互原型构建。
+- `prd-multi-role-pipeline.md`：AE-Vela 轻量多角色 PRD 写作、审稿、格式化和沉淀。
+- `daily-work-task-card.md`：日常任务开局的 Tiny / Light / Full 模式、对象 owner、证据、门禁和沉淀判断卡。
 
 建议：
 

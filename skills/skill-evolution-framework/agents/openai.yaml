@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Evolution"
+  short_description: "按对象分类和盲区地图进化本地 skills"
+  default_prompt: "Use $skill-evolution-framework to upgrade a local Codex skill with object modes, blind-spot coverage, verification, and a concise reusable structure."

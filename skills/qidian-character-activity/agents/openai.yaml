@@ -1,0 +1,4 @@
+interface:
+  display_name: "起点角色活动"
+  short_description: "复用起点IP角色人格测试活动搭建部署看板统计容量完整流程"
+  default_prompt: "Use $qidian-character-activity to build or iterate a Qidian IP character quiz activity."

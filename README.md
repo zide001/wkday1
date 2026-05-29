@@ -32,7 +32,9 @@ cd wkday1
 
 ```powershell
 git pull --rebase
-git add .
+git status --short
+git add <reviewed-path-1> <reviewed-path-2>
+git diff --cached --check
 git commit -m "Update shared Codex library"
 git push
 ```
@@ -41,5 +43,13 @@ git push
 
 1. 敏感账号、密码、密钥不要直接提交到 Git。
 2. 大文件优先放 `materials/`，如果超过 GitHub 限制，改用 Git LFS 或外部对象存储。
-3. 每次重要整理后提交一次，提交说明写清楚变更内容。
+3. 每次重要整理后提交一次，提交说明写清楚变更内容；提交前只 stage 本次确认过的文件。
 4. 另一台电脑开始工作前先 `git pull --rebase`，结束后再 `git push`。
+
+## 日常工作协议检查
+
+AE-Vela 日常工作协议更新后，可以用只读检查确认关键入口、知识默认值和安全同步规则仍然存在：
+
+```bash
+bash scripts/verify-daily-work-rollout.sh
+```

@@ -46,7 +46,8 @@ Do not save:
 
    ```bash
    git status --short
-   git add knowledge workflows skills README.md
+   git add <reviewed-knowledge-or-workflow-paths>
+   git diff --cached --check
    git commit -m "Update Codex knowledge base"
    git push
    ```

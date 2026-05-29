@@ -8,6 +8,7 @@
 - `codex-operations.md`：Codex、GitHub、wkday1、skills 的本机操作上下文。
 - `decisions.md`：已经确认、未来应默认遵守的重要决策。
 - `session-notes/`：只保存有长期价值的会话摘要，不保存完整聊天流水。
+- `session-notes/2026-05-29-ae-vela-daily-work-adoption.md`：AE-Vela 日常工作协议迁移、任务卡、对象级试运行队列和同步边界。
 
 更新原则：
 

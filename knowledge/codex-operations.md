@@ -28,13 +28,25 @@ Built-in `.system` skills are not mirrored.
 
 ## Standard Sync Commands
 
+Use this only after reviewing the current dirty worktree and deciding the exact
+scope to publish. Avoid `git add .` in this shared library unless the user has
+explicitly approved every dirty path.
+
 ```bash
 cd /Users/yangzide/.codex/skills/zide-shared-library/references/wkday1
 git pull --rebase
 git status --short
-git add .
+git add <reviewed-path-1> <reviewed-path-2>
+git diff --cached --check
 git commit -m "Update shared Codex library"
 git push
+```
+
+For the AE-Vela daily-work rollout, run the read-only verifier before a scoped
+sync:
+
+```bash
+bash scripts/verify-daily-work-rollout.sh
 ```
 
 ## Skill Backup Rule
